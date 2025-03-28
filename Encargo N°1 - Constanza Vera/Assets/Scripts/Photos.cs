@@ -5,9 +5,11 @@ public class Photos : MonoBehaviour
 {
     public RawImage photoDisplay; // Referencia a la RawImage en la UI para mostrar la foto.
     public float displayDuration = 2.0f; // Duración en segundos que la foto se muestra.
-    public int photoWidth = 512; // Ancho de la foto. Ajusta según necesidad.
-    public int photoHeight = 512; // Alto de la foto. Ajusta según necesidad.
-
+    public int photoWidth = 512; // Ancho de la foto. 
+    public int photoHeight = 512; // Alto de la foto
+    public string albumName = "PhonePhotos";
+    public GameObject gallery;
+    public GameObject galleryImage;
     private Texture2D photoTexture;
     private bool isDisplayingPhoto = false;
 
