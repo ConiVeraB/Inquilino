@@ -13,6 +13,7 @@ public class Photos : MonoBehaviour
     private Texture2D photoTexture;
     private bool isDisplayingPhoto = false;
 
+    public PhoneSystem phoneSystem;
     private void Start()
     {
         if (photoDisplay != null)
@@ -23,14 +24,28 @@ public class Photos : MonoBehaviour
         {
             Debug.LogError("No se ha asignado la RawImage en el Inspector.");
         }
+
+        if (phoneSystem == null)
+        {
+            Debug.LogError("No se ha asignado el PhoneSystem en el Inspector del script Photos.");
+        }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !isDisplayingPhoto)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !isDisplayingPhoto && IsPhoneActive())
         {
             TakePhoto();
         }
+    }
+
+    private bool IsPhoneActive()
+    {
+        if (phoneSystem != null && phoneSystem.Phone != null)
+        {
+            return phoneSystem.Phone.activeSelf;
+        }
+        return false; // Si no hay PhoneSystem o Phone, asume que no está activo.
     }
 
     void TakePhoto()
@@ -74,9 +89,7 @@ public class Photos : MonoBehaviour
         photoDisplay.gameObject.SetActive(false);
         Destroy(photoTexture);
         photoTexture = null; // Importante para evitar errores si se toma otra foto rápidamente.
-        isDisplayingPhoto = false; // Permite tomar otra foto.
+        isDisplayingPhoto = false; // Permite tomar otra foto
+
     }
-
-
-
 }

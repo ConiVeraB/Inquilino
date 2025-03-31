@@ -646,6 +646,7 @@ MonoBehaviour:
   albumName: PhonePhotos
   gallery: {fileID: 0}
   galleryImage: {fileID: 0}
+  phoneSystem: {fileID: 1861115302}
 --- !u!114 &330585549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1647,7 +1648,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.3
 --- !u!222 &1227406699
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1670,9 +1671,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component: {fileID: 1463990877}
   lines:
-  - Buenas tardes
-  - JAJAJAJAA LA ESQUIZO
-  textSpeed: 0.3
+  - Ya sabes Isabel. A recuperar tu vida
+  - "\xBFEn qu\xE9 hab\xEDa quedado?"
+  - 'Ah si, la ropa. '
+  - "(Sonido de notificaci\xF3n de tel\xE9fono)"
+  textSpeed: 0.1
 --- !u!1 &1310367457
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,7 +2220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buenas Tardes
+  m_text: Ya sabes Isabel. A recuperar tu vida
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2282,7 +2285,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -487.0254, y: 0, z: 0, w: 0}
+  m_margin: {x: -487.0254, y: 0, z: -639.08923, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2605,7 +2608,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Controles\nLinterna UV - Space \nFoto - Click izquierdo\nCambio de entorno
-    - R\nActivar celular - I\n"
+    - R\nActivar celular - TAB\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
