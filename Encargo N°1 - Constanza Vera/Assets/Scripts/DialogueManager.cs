@@ -15,7 +15,8 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
        component.text = string.Empty;
-        StartDialogue();
+       gameObject.SetActive(false);
+        // StartDialogue();
     }
 
    
@@ -35,9 +36,11 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
+        gameObject.SetActive(true);
         index = 0;
+        component.text = string.Empty;
         StartCoroutine(TypeLine());
     }
 

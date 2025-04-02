@@ -1,13 +1,20 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PhoneSystem : MonoBehaviour
 {
     public GameObject Phone;
     public float Delay = 2f;
+    public Sprite Sprite;
+    public Button Accept;
+    public Button Decline;
+    public DialogueManager dialogueManager;
     void Start()
     {
         Phone.SetActive(false);
+        Accept.onClick.AddListener(AcceptCall);
+        Decline.onClick.AddListener(DeclineCall);
     }
 
     void Update()
@@ -35,4 +42,19 @@ public class PhoneSystem : MonoBehaviour
         yield return new WaitForSeconds(Delay); // Espera 2 segundos
         Phone.SetActive(false); // Oculta el teléfono
     }
+
+    void AcceptCall()
+    {
+        if (dialogueManager != null)
+        {
+            dialogueManager.StartDialogue(); // Inicia el diálogo
+        }
+        Phone.SetActive(false); // Oculta el teléfono
+    }
+
+    void DeclineCall()
+    {
+        Phone.SetActive(false); // Solo cierra el teléfono sin iniciar diálogo
+    }
+
 }
