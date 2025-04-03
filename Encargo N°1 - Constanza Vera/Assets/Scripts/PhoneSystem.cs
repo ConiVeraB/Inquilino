@@ -11,6 +11,7 @@ public class PhoneSystem : MonoBehaviour
     public Button Decline;
     public GameObject phoneBackground;
     public DialogueManager dialogueManager;
+
     void Start()
     {
         Phone.SetActive(true);

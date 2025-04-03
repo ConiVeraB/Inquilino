@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
 
     public DialogueManager dialogueManager;
     public ObjetiveManager objetiveManager;
+
+    public AudioSource bañoruido;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -90,6 +92,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Baño"))
         {
             // Muestra el diálogo específico cuando entra al baño
+            bañoruido.Play();
             dialogueManager.lines = new string[]
              {
                 "No espero ninguna visita.", // Primera línea

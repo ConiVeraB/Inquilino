@@ -2,16 +2,13 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    
-    void Start()
-    {
-        
-    }
+    public AudioSource doorSource;
+    public Animator animator;
 
-    
-    void Update()
+    public void OpenDoor()
     {
-        
+        animator.SetTrigger("Door");
+        doorSource.Play();
     }
 
     void OnTriggerEnter(Collider other)
@@ -19,8 +16,16 @@ public class Door : MonoBehaviour
         // Verifica si el objeto que entra en el trigger es el personaje
         if (other.CompareTag("Player"))
         {
-            // Destruye el objeto
-            Destroy(gameObject);
+            
+            OpenDoor();
         }
     }
+
+    /*private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player")) 
+        {
+            animator.ResetTrigger("Door");
+        }
+    }*/
 }

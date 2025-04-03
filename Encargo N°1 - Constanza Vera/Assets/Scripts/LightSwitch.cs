@@ -6,6 +6,9 @@ public class LightSwitch : MonoBehaviour
     private bool isLightOn = false;
     private bool playerInRange = false;
 
+    public AudioSource prender;
+    public AudioSource apagar;
+
     void Start()
     {
         // Asegurarse de que la luz empiece apagada
@@ -43,10 +46,12 @@ public class LightSwitch : MonoBehaviour
         if (isLightOn)
         {
             lightToControl.enabled = true; // Enciende la luz
+            prender.Play();
         }
         else
         {
             lightToControl.enabled = false; // Apaga la luz
+            apagar.Play();
         }
     }
 }
