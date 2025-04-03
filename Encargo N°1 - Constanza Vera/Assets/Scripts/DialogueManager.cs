@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     public float textSpeed;
 
     private int index;
-
+    public PhoneSystem phoneSystem;
 
     void Start()
     {
@@ -60,6 +60,11 @@ public class DialogueManager : MonoBehaviour
             index++;
             component.text = string.Empty;
             StartCoroutine(TypeLine());
+
+            if (lines[index] == "[Llamada finalizada]")
+            {
+                phoneSystem.HidePhoneElements(); // Oculta los elementos del teléfono
+            }
         }
         else
         {

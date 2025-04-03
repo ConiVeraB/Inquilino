@@ -9,10 +9,11 @@ public class PhoneSystem : MonoBehaviour
     public Sprite Sprite;
     public Button Accept;
     public Button Decline;
+    public GameObject phoneBackground;
     public DialogueManager dialogueManager;
     void Start()
     {
-        Phone.SetActive(false);
+        Phone.SetActive(true);
         Accept.onClick.AddListener(AcceptCall);
         Decline.onClick.AddListener(DeclineCall);
     }
@@ -55,6 +56,14 @@ public class PhoneSystem : MonoBehaviour
     void DeclineCall()
     {
         Phone.SetActive(false); // Solo cierra el teléfono sin iniciar diálogo
+    }
+
+    public void HidePhoneElements()
+    {
+        phoneBackground.SetActive(false);
+        Accept.gameObject.SetActive(false);
+        Decline.gameObject.SetActive(false);
+        Phone.SetActive(false);
     }
 
 }

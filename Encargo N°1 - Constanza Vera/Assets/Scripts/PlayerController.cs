@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
 
     private float rotaciónYActual; // Valor suavizado de la rotación vertical
 
+    public DialogueManager dialogueManager;
+    public ObjetiveManager objetiveManager;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -27,6 +29,9 @@ public class PlayerController : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, 0); // Rotación del personaje
         camara.transform.localRotation = Quaternion.Euler(0, 0, 0);
+
+        objetiveManager.AddObjective("Ve a la cocina", "Pepara un café, has tenido un día largo.");
+        objetiveManager.UpdateObjective();
     }
 
 
@@ -63,5 +68,38 @@ public class PlayerController : MonoBehaviour
         rotaciónYActual = Mathf.Lerp(rotaciónYActual, rotaciónY, suavidad * Time.deltaTime);
 
         camara.transform.localRotation = Quaternion.Euler(rotaciónYActual, 0, 0);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        // Verifica si el objeto con el que el jugador colisionó tiene el tag "Cocina"
+        if (other.CompareTag("Cocina"))
+        {
+            // Muestra el diálogo específico cuando entra a la cocina
+            dialogueManager.lines = new string[]
+            {
+                "Qué raro… Estoy segura que lo dejé aquí"
+            };
+            dialogueManager.StartDialogue(); // Inicia el diálogo
+
+            objetiveManager.CompleteObjective(); // Completa el objetivo de ir a la cocina
+         
+            objetiveManager.AddObjective("Busca el tarro de café", "No debió ir muy lejos, ¿verdad?");
+            objetiveManager.UpdateObjective();
+        }
+        if (other.CompareTag("Baño"))
+        {
+            // Muestra el diálogo específico cuando entra al baño
+            dialogueManager.lines = new string[]
+             {
+                "No espero ninguna visita.", // Primera línea
+                "¿Quién será a esta hora?"       // Segunda línea
+             };
+            dialogueManager.StartDialogue(); // Inicia el diálogo
+
+            objetiveManager.CompleteObjective(); // Completa el objetivo de ir al baño
+            objetiveManager.AddObjective("Ir a la puerta principal", "Dirígete a la entrada de la casa.");
+            objetiveManager.UpdateObjective();
+        }
     }
 }
