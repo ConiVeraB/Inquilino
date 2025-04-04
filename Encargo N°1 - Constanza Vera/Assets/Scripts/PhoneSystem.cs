@@ -92,6 +92,8 @@ public class PhoneSystem : MonoBehaviour
         // Activa victorChat y Phone después del retraso
         victorChat.gameObject.SetActive(true);
         Phone.SetActive(true);
+        reply.gameObject.SetActive(true);
+        Rereply.gameObject.SetActive(true);
     }
 
 }

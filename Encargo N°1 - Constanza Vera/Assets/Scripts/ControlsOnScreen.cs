@@ -7,7 +7,7 @@ public class ControlsOnScreen : MonoBehaviour
     public GameObject controls;
     void Start()
     {
-        controls.SetActive(true);
+        controls.SetActive(false);
     }
    
 }

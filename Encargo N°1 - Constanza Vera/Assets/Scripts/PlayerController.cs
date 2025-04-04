@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, 0); // Rotación del personaje
         camara.transform.localRotation = Quaternion.Euler(0, 0, 0);
 
-        objetiveManager.AddObjective("Ve a la cocina", "Pepara un café, has tenido un día largo.");
+        objetiveManager.AddObjective("Contesta la llamada y enciende la luz al entrar", "Luego ve a la cocina a prepararte un café");
         objetiveManager.UpdateObjective();
     }
 

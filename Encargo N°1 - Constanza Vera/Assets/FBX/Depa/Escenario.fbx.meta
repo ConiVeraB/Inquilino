@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 89af014ca44162449941db01c37ba5d0
+guid: ae7c1f90101286a4da481c566e20aa70
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: textura-sofa
-    second: {fileID: 2800000, guid: c72680df96ce98b429769a50aed803a2, type: 3}
+      name: Papel mural antiguo textura
+    second: {fileID: 2800000, guid: a27b2ce5ec752ea40b5ca8b95db8900f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: hermoso antiguo textura madera oscura
+    second: {fileID: 2800000, guid: 7fb9da94e2fab1d458996c6b43c47ce7, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
