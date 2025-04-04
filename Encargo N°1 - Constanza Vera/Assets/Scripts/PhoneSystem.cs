@@ -51,7 +51,7 @@ public class PhoneSystem : MonoBehaviour
         {
             dialogueManager.StartDialogue(); // Inicia el diálogo
         }
-        Phone.SetActive(false); // Oculta el teléfono
+        Phone.SetActive(true); 
     }
 
     void DeclineCall()
