@@ -23,8 +23,7 @@ public class PhoneSystem : MonoBehaviour
         victorChat.gameObject.SetActive(false);
         reply.gameObject.SetActive(false);
         Rereply.gameObject.SetActive(false);
-
-           
+      
 
         Phone.SetActive(true);
         Accept.onClick.AddListener(AcceptCall);
