@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public ObjetiveManager objetiveManager;
 
     public AudioSource bañoruido;
+
+    public PhoneSystem phoneSystem;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -103,6 +105,12 @@ public class PlayerController : MonoBehaviour
             objetiveManager.CompleteObjective(); // Completa el objetivo de ir al baño
             objetiveManager.AddObjective("Ir a la puerta principal", "Dirígete a la entrada de la casa.");
             objetiveManager.UpdateObjective();
+
+            if (phoneSystem != null)
+            {
+                phoneSystem.ActivarImagen();
+            }
+
         }
     }
 }

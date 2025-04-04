@@ -11,9 +11,21 @@ public class PhoneSystem : MonoBehaviour
     public Button Decline;
     public GameObject phoneBackground;
     public DialogueManager dialogueManager;
+    public Image victorChat;
+    public float delay = 15f;
+    public Image reply;
+    public Text replyText;
+    public Image Rereply;
+    public Text RereplyText;
 
     void Start()
     {
+        victorChat.gameObject.SetActive(false);
+        reply.gameObject.SetActive(false);
+        Rereply.gameObject.SetActive(false);
+
+           
+
         Phone.SetActive(true);
         Accept.onClick.AddListener(AcceptCall);
         Decline.onClick.AddListener(DeclineCall);
@@ -65,6 +77,22 @@ public class PhoneSystem : MonoBehaviour
         Accept.gameObject.SetActive(false);
         Decline.gameObject.SetActive(false);
         Phone.SetActive(false);
+    }
+
+    public void ActivarImagen()
+    {
+        StartCoroutine(EsperarYActivarObjetos());
+       
+    }
+
+    private IEnumerator EsperarYActivarObjetos()
+    {
+        // Espera el tiempo especificado
+        yield return new WaitForSeconds(delay);
+
+        // Activa victorChat y Phone después del retraso
+        victorChat.gameObject.SetActive(true);
+        Phone.SetActive(true);
     }
 
 }
