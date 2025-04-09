@@ -3323,8 +3323,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 371535047}
+  - component: {fileID: 371535048}
   m_Layer: 0
-  m_Name: FBX
+  m_Name: SoundsFBXManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3339,12 +3340,24 @@ Transform:
   m_GameObject: {fileID: 371535046}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1233826, y: 6.234874, z: 1.1502819}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &371535048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371535046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 122188bf4ebae7547b510660fb733b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &387873704
 GameObject:
   m_ObjectHideFlags: 0
@@ -9684,6 +9697,8 @@ GameObject:
   - component: {fileID: 1227406699}
   - component: {fileID: 1227406698}
   - component: {fileID: 1227406700}
+  - component: {fileID: 1227406702}
+  - component: {fileID: 1227406701}
   m_Layer: 5
   m_Name: TextBox
   m_TagString: Untagged
@@ -9779,6 +9794,116 @@ MonoBehaviour:
   - "Necesito un caf\xE9\u2026  "
   textSpeed: 0.1
   phoneSystem: {fileID: 1861115302}
+  introAudio: {fileID: 0}
+--- !u!114 &1227406701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227406696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 122188bf4ebae7547b510660fb733b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &1227406702
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227406696}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dde176ea6fc70324aa48e06fdfda720e, type: 3}
+  m_Resource: {fileID: 8300000, guid: dde176ea6fc70324aa48e06fdfda720e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1236548760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16458,9 +16583,9 @@ SceneRoots:
   - {fileID: 1093895153}
   - {fileID: 1348907958}
   - {fileID: 1587589656}
+  - {fileID: 371535047}
   - {fileID: 1861115301}
   - {fileID: 330102709}
-  - {fileID: 371535047}
   - {fileID: 206806943}
   - {fileID: 1669548487}
   - {fileID: 666779006}
