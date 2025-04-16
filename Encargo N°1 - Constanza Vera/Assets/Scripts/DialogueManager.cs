@@ -12,15 +12,10 @@ public class DialogueManager : MonoBehaviour
     private int index;
     public PhoneSystem phoneSystem;
 
-    private AudioSource audioSource;
-    public AudioClip introAudio;
-
     void Start()
     {
        component.text = string.Empty;
        gameObject.SetActive(false);
-       audioSource = GetComponent<AudioSource>();
-        StartDialogueWithAudio();
         // StartDialogue();
     }
 
@@ -41,18 +36,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogueWithAudio()
-    {
-        audioSource.PlayOneShot(introAudio);
-        StartCoroutine(EsperaAudioEInicioDialogo());
-        StartDialogue();
-    }
-    IEnumerator EsperaAudioEInicioDialogo()
-    {
-        yield return new WaitForSeconds(introAudio.length);
-        StartDialogueWithAudio();
-    }
-    
     public void StartDialogue()
     {
         gameObject.SetActive(true);
