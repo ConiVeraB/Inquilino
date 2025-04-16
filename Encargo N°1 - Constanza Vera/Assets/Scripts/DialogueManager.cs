@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
 
     private int index;
     public PhoneSystem phoneSystem;
+    public Button skipButton;
 
     void Start()
     {
@@ -39,6 +40,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue()
     {
         gameObject.SetActive(true);
+        skipButton.gameObject.SetActive(true);
         index = 0;
         component.text = string.Empty;
         StartCoroutine(TypeLine());
@@ -69,6 +71,20 @@ public class DialogueManager : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+            skipButton.gameObject.SetActive(false);
+        }
+    }
+
+    public void OnSkipButtonPressed()
+    {
+        if (component.text == lines[index])
+        {
+            NextLine();
+        }
+        else
+        {
+            StopAllCoroutines();
+            component.text = lines[index];
         }
     }
 }
