@@ -13,7 +13,7 @@ public class UVLight : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             UV.enabled = !UV.enabled;
         }
