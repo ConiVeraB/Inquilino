@@ -4105,6 +4105,7 @@ MonoBehaviour:
   replyText: {fileID: 0}
   Rereply: {fileID: 388759604}
   RereplyText: {fileID: 0}
+  photos: []
 --- !u!114 &1861115303
 MonoBehaviour:
   m_ObjectHideFlags: 0

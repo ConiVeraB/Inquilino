@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +19,9 @@ public class PhoneSystem : MonoBehaviour
     public Text replyText;
     public Image Rereply;
     public Text RereplyText;
+
+    [Header("## PHOTOS ##")]
+    public List<Texture2D> photos = new();
 
     void Start()
     {
@@ -94,6 +99,14 @@ public class PhoneSystem : MonoBehaviour
         Phone.SetActive(true);
         reply.gameObject.SetActive(true);
         Rereply.gameObject.SetActive(true);
+    }
+
+    public void SavePhoto(Texture2D photo)
+    {
+        Texture2D newText = new Texture2D(photo.width, photo.height, TextureFormat.RGB24, false);
+        newText.SetPixels(photo.GetPixels());
+        newText.Apply();
+        photos.Add(newText);
     }
 
 }

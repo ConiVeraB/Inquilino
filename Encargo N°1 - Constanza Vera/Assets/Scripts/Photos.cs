@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 public class Photos : MonoBehaviour
 {
+
     public RawImage photoDisplay; // Referencia a la RawImage en la UI para mostrar la foto.
     public float displayDuration = 2.0f; // Duración en segundos que la foto se muestra.
     public int photoWidth = 512; // Ancho de la foto. 
@@ -14,6 +15,7 @@ public class Photos : MonoBehaviour
     private bool isDisplayingPhoto = false;
 
     public PhoneSystem phoneSystem;
+
     private void Start()
     {
         if (photoDisplay != null)
@@ -64,6 +66,7 @@ public class Photos : MonoBehaviour
         RenderTexture renderTexture = new RenderTexture(photoWidth, photoHeight, 24); // 24 bits de profundidad.
         Camera.main.targetTexture = renderTexture; // Asigna la RenderTexture a la cámara.
 
+
         //Renderiza la escena en la RenderTexture
         Camera.main.Render();
 
@@ -81,6 +84,7 @@ public class Photos : MonoBehaviour
         // 3. Muestra la foto en la RawImage.
         photoDisplay.texture = photoTexture;
         photoDisplay.gameObject.SetActive(true);
+        phoneSystem.SavePhoto(photoTexture);
 
         // 4. Espera un tiempo.
         yield return new WaitForSeconds(displayDuration);
