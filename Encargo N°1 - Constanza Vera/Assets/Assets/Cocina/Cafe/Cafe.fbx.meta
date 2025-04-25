@@ -1,9 +1,29 @@
 fileFormatVersion: 2
-guid: a409e0dee50fd2945a3e9ccec5b87627
+guid: ec5a0355bb545b1449d4b00220a2ef58
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LogoCafe
+    second: {fileID: 2800000, guid: 3d944911a57494342a724a5304db2da2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LogoCafe-removebg-preview
+    second: {fileID: 2800000, guid: 6cac15d0fe1076045af847864d7bff12, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Nescafe
+    second: {fileID: 2800000, guid: 1ad3b10d2400c3a4a95e1fc0fa96abde, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ROJO
+    second: {fileID: 2800000, guid: c3b03a55638fd314ebd5e62f111b5e62, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
