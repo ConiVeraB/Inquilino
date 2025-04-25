@@ -7,6 +7,7 @@ TagManager:
   - Movable
   - Cocina
   - "Ba\xF1o"
+  - Stairs
   layers:
   - Default
   - TransparentFX

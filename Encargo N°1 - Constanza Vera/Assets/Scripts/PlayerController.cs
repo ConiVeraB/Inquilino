@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public AudioSource bañoruido;
 
     public PhoneSystem phoneSystem;
+
+    bool enEscalera = false;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -48,12 +50,22 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 forward = camara.transform.forward * VerticalInput;
+        /*Vector3 forward = camara.transform.forward * VerticalInput;
         Vector3 right = camara.transform.right * HorizontalInput;
         Vector3 movimiento = (forward + right) * Time.fixedDeltaTime;  // Escala por el tiempo fijo
+        rb.MovePosition(transform.position + movimiento);*/
+
+        Vector3 camForward = camara.transform.forward;
+        camForward.y = 0;
+        camForward.Normalize(); // vuelve a normalizar el vector para que no pierda dirección
+
+        Vector3 camRight = camara.transform.right;
+        camRight.y = 0;
+        camRight.Normalize();
+
+        Vector3 movimiento = (camForward * VerticalInput + camRight * HorizontalInput) * Time.fixedDeltaTime;
         rb.MovePosition(transform.position + movimiento);
 
-       
     }
 
     void MovimientoCamara()
@@ -90,6 +102,12 @@ public class PlayerController : MonoBehaviour
          
             objetiveManager.AddObjective("Busca el tarro de café", "No debió ir muy lejos, ¿verdad?");
             objetiveManager.UpdateObjective();
+
+            if (other.CompareTag("Escalera"))
+            {
+                enEscalera = true;
+                rb.useGravity = false; // Para que no caiga al subir
+            }
         }
         if (other.CompareTag("Baño"))
         {
@@ -113,4 +131,15 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+
+void OnTriggerExit(Collider other)
+{
+    if (other.CompareTag("Escalera"))
+    {
+        enEscalera = false;
+        rb.useGravity = true; // Vuelve a caer normalmente
+    }
+}
+
+
 }
