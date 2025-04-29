@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Pisoba\xF1onew"
+  m_Name: PisoPrimeroMat
   m_Shader: {fileID: -6465566751694194690, guid: a89892c9fb18fa5409fc5d40bacc2150, type: 3}
-  m_Parent: {fileID: -876546973899608171, guid: a89892c9fb18fa5409fc5d40bacc2150, type: 3}
+  m_Parent: {fileID: 2100000, guid: 0390a2a65357d7c4c9b9c71747ff6a1d, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -25,25 +25,24 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: f8e467944280f9c4c81ea357cf8dd1e0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9adf13ec81ce9f641aca796e15086ea7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Roughness:
-        m_Texture: {fileID: 2800000, guid: f6dd1fdc71bf79444a3e9c91a6e0fbcc, type: 3}
+        m_Texture: {fileID: 2800000, guid: c95a9ccbe2b689a428e3c23a50b6bc06, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: cf4824cab808f664e82d58ae872a47f9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 11335d468cfb0074d95352428474bc6b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - _QueueControl: 0
+    m_Floats: []
     m_Colors:
-    - _Tiling: {r: 3, g: 3, b: 0, a: 0}
+    - _Tiling: {r: 20, g: 20, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &3413498481680510398
+--- !u!114 &1697108404389178179
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
