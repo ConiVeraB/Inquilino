@@ -8,6 +8,7 @@ TagManager:
   - Cocina
   - "Ba\xF1o"
   - Stairs
+  - Enemy
   layers:
   - Default
   - TransparentFX
