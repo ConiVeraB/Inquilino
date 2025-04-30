@@ -96,6 +96,10 @@ public class PhoneController : MonoBehaviour
             StartCoroutine(EnableUIAfterAnimation(animationLength, follower));
             isAnimating = false;
 
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+
+
         }
         else
         {
@@ -104,6 +108,10 @@ public class PhoneController : MonoBehaviour
 
             StartCoroutine(ResetAndFadeOut(follower));
             isAnimating = false;
+
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+
 
         }
     }
@@ -261,9 +269,42 @@ public class PhoneController : MonoBehaviour
 
             panelBloqueo.SetActive(false);
 
-            StartCoroutine(AnimatePhoneToCenter());
+            var follower = phoneModel.GetComponent<FollowPlayer>();
+            if (follower != null) follower.followEnabled = false;
+
+            StartCoroutine(AnimatePhoneToCenterAndReactivateFollower(follower));
+
         }
     }
+
+    IEnumerator AnimatePhoneToCenterAndReactivateFollower(FollowPlayer follower)
+    {
+        float elapsedTime = 0f;
+
+        Vector3 startPos = phoneModel.transform.position;
+        Vector3 endPos = Camera.main.transform.position + Camera.main.transform.forward * 0.4f + Camera.main.transform.up * -0.2f;
+
+        Vector3 startScale = phoneModel.transform.localScale;
+        Vector3 endScale = new Vector3(0.18f, 0.18f, 0.18f); // ajusta según tu modelo real
+
+        while (elapsedTime < phoneMoveDuration)
+        {
+            float t = elapsedTime / phoneMoveDuration;
+
+            phoneModel.transform.position = Vector3.Lerp(startPos, endPos, t);
+            phoneModel.transform.localScale = Vector3.Lerp(startScale, endScale, t);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        phoneModel.transform.position = endPos;
+        phoneModel.transform.localScale = endScale;
+
+        if (follower != null) follower.followEnabled = true;
+    }
+
+
 
     IEnumerator AnimatePhoneToCenter()
     {

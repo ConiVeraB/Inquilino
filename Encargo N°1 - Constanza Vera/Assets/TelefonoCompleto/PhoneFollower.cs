@@ -40,8 +40,14 @@ public class FollowPlayer : MonoBehaviour
         // --- Aplicar Transformaciones ---
         transform.position = targetPosition;
         transform.rotation = targetRotation;
-        transform.localScale = desiredScale; // <-- ¡NUEVO! Aplicamos la escala deseada cada frame
+        //transform.localScale = desiredScale; // <-- ¡NUEVO! Aplicamos la escala deseada cada frame
     }
+
+    void OnEnable()
+    {
+        transform.localScale = desiredScale; // una sola vez, no cada frame
+    }
+
 }
 
 
