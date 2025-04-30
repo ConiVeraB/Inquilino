@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
 
     public PhoneSystem phoneSystem;
 
+    public GameObject telefono;
+
+    //public Transform Player;
+
     bool enEscalera = false;
     void Start()
     {
@@ -38,6 +42,7 @@ public class PlayerController : MonoBehaviour
 
         objetiveManager.AddObjective("Contesta la llamada y enciende la luz al entrar", "Luego ve a la cocina a prepararte un café");
         objetiveManager.UpdateObjective();
+        //AgarrarTelefono();
     }
 
 
@@ -140,6 +145,11 @@ void OnTriggerExit(Collider other)
         rb.useGravity = true; // Vuelve a caer normalmente
     }
 }
-
+    //void AgarrarTelefono()
+    //{
+    //    telefono.transform.SetParent(Player.transform);
+    //    telefono.transform.localPosition = new Vector3(0, 1.5f, 1);
+    //    telefono.transform.localRotation = Quaternion.identity;
+    //}
 
 }
