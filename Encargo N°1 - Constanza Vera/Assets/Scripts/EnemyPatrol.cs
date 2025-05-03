@@ -9,6 +9,9 @@ public class EnemyPatrol : MonoBehaviour
     [Header("Tiempo de espera entre puntos")]
     public float waitTime = 2f;
 
+    [Header("Audio")]
+    public AudioSource footstepAudio;
+   
     private int currentPointIndex = 0;
     private float waitTimer = 0f;
     private NavMeshAgent agent;
@@ -66,7 +69,25 @@ public class EnemyPatrol : MonoBehaviour
                 waitTimer = 0f;
             }
         }
+        if (footstepAudio != null)
+        {
+            if (agent.velocity.magnitude > 0.1f && agent.remainingDistance > agent.stoppingDistance)
+            {
+                if (!footstepAudio.isPlaying)
+                {
+                    footstepAudio.Play();
+                }
+            }
+            else
+            {
+                if (footstepAudio.isPlaying)
+                {
+                    footstepAudio.Stop();
+                }
+            }
+        }
     }
-
 }
+
+
 
