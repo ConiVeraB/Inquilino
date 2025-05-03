@@ -17,6 +17,15 @@ public class PhoneController : MonoBehaviour
     public GameObject panelBloqueo;
     public GameObject panelInicio;
     public GameObject panelCamara;
+    public GameObject appLuces; 
+
+    [Header("Control de Jugador")]
+    public PlayerController movimientoJugador;
+    public FirstPersonCamera camaraJugador;
+
+
+
+
 
     [Header("Cámara Física del Teléfono")]
     public Camera cameraCelular;
@@ -96,8 +105,18 @@ public class PhoneController : MonoBehaviour
             StartCoroutine(EnableUIAfterAnimation(animationLength, follower));
             isAnimating = false;
 
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            // Bloquear o desbloquear control del jugador
+            if (movimientoJugador != null)
+                movimientoJugador.enabled = !isPhoneActive;
+
+            if (camaraJugador != null)
+                camaraJugador.enabled = !isPhoneActive;
+
+            Cursor.visible = isPhoneActive;
+            Cursor.lockState = isPhoneActive ? CursorLockMode.None : CursorLockMode.Locked;
+
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
 
 
         }
@@ -115,6 +134,38 @@ public class PhoneController : MonoBehaviour
 
         }
     }
+
+    public void OpenAppLuces()
+    {
+        Debug.Log("Abriendo App de Luces...");
+        ActivateOnlyPanel(appLuces);
+    }
+
+    public void VolverAlInicioDesdeApp()
+    {
+        if (panelInicio != null)
+            panelInicio.SetActive(true);
+
+        if (panelCamara != null)
+            panelCamara.SetActive(false);
+
+        if (pantallaRecorte != null)
+            pantallaRecorte.SetActive(true);
+
+        if (phoneUI != null)
+            phoneUI.SetActive(true);
+
+        // Desactiva cualquier otra app abierta
+        if (panelBloqueo != null) panelBloqueo.SetActive(false);
+        if (panelCamara != null) panelCamara.SetActive(false);
+        if (appLuces != null) appLuces.SetActive(false);
+
+        // Apaga cámara física
+        if (cameraCelular != null)
+            cameraCelular.enabled = false;
+    }
+
+
 
 
     IEnumerator EnableUIAfterAnimation(float delay, FollowPlayer follower)
@@ -209,6 +260,7 @@ public class PhoneController : MonoBehaviour
     {
         ActivateOnlyPanel(panelBloqueo);
     }
+
 
     void DetectSwipe()
     {
@@ -349,6 +401,7 @@ public class PhoneController : MonoBehaviour
         if (panelBloqueo != null) panelBloqueo.SetActive(false);
         if (panelInicio != null) panelInicio.SetActive(false);
         if (panelCamara != null) panelCamara.SetActive(false);
+        if (appLuces != null) appLuces.SetActive(false); 
 
         if (panelToActivate != null)
             panelToActivate.SetActive(true);
@@ -356,4 +409,5 @@ public class PhoneController : MonoBehaviour
         if (cameraCelular != null)
             cameraCelular.enabled = (panelToActivate == panelCamara);
     }
+
 }
