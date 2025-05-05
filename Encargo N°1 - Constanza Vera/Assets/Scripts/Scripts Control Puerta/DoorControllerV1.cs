@@ -9,17 +9,15 @@ public class DoorControllerV1 : MonoBehaviour
     void Start()
     {
         anim = door.GetComponent<Animator>();
-       
-
+        if (anim == null)
+        {
+            Debug.LogError("El Animator no está asignado en el GameObject de la puerta");
+        }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            anim.SetTrigger("abrir");
-            anim.SetTrigger("cerrar");
-        }
+       
     }
     private void OnTriggerEnter(Collider other)
     {
