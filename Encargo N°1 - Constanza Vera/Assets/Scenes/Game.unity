@@ -49025,6 +49025,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1557731435}
+  - component: {fileID: 1557731437}
   - component: {fileID: 1557731436}
   m_Layer: 0
   m_Name: PivotDoorWhite (6)
@@ -49061,6 +49062,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120ec53e9224fb648884966520a4e90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1557731437
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557731434}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 24e341ef217458b488e6fcc100f82d7e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1558946022
 PrefabInstance:
   m_ObjectHideFlags: 0
