@@ -107,14 +107,16 @@ public class PlayerController : MonoBehaviour
          
             objetiveManager.AddObjective("Busca el tarro de café", "No debió ir muy lejos, ¿verdad?");
             objetiveManager.UpdateObjective();
-
-            if (other.CompareTag("Escalera"))
-            {
-                enEscalera = true;
-                rb.useGravity = false; // Para que no caiga al subir
             }
-        }
-        if (other.CompareTag("Baño"))
+
+
+       if (other.CompareTag("Escalera"))
+       {
+          enEscalera = true;
+          rb.useGravity = false; // Para que no caiga al subir
+       }
+        
+      if (other.CompareTag("Baño"))
         {
             // Muestra el diálogo específico cuando entra al baño
             bañoruido.Play();

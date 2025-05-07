@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PisoPrimeroMat
+  m_Name: Pisoprim M
   m_Shader: {fileID: -6465566751694194690, guid: a89892c9fb18fa5409fc5d40bacc2150, type: 3}
   m_Parent: {fileID: 2100000, guid: 0390a2a65357d7c4c9b9c71747ff6a1d, type: 2}
   m_ModifiedSerializedProperties: 0
@@ -39,7 +39,7 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Tiling: {r: 40, g: 40, b: 0, a: 0}
+    - _Tiling: {r: 30, g: 30, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &1697108404389178179

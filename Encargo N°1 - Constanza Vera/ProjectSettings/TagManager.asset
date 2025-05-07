@@ -9,6 +9,7 @@ TagManager:
   - "Ba\xF1o"
   - Stairs
   - Enemy
+  - Escalera
   layers:
   - Default
   - TransparentFX
