@@ -4,6 +4,12 @@ public class DoorControllerV2 : MonoBehaviour
 {
     private Animator anim;
     private bool puertaAbierta = false;
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip sonidoAbrir;
+    public AudioClip sonidoCerrar;
+
     void Start()// Start is called once before the first execution of Update after the MonoBehaviour is created
     {
         anim = GetComponent<Animator>();
@@ -22,13 +28,23 @@ public class DoorControllerV2 : MonoBehaviour
 
         if (puertaAbierta)
         {
+            ReproducirSonido(sonidoCerrar);
             anim.SetTrigger("cerrar");
             puertaAbierta = false;
         }
         else
         {
             anim.SetTrigger("abrir");
+            ReproducirSonido(sonidoAbrir);
             puertaAbierta = true;
+        }
+    }
+
+    private void ReproducirSonido(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip);
         }
     }
 }
