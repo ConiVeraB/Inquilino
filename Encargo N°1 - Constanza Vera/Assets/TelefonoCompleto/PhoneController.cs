@@ -81,8 +81,8 @@ public class PhoneController : MonoBehaviour
 
     void TogglePhone()
     {
-        if (isAnimating) return; // Evita que se abra o cierre durante animación
-        isAnimating = true;      // Marcamos que está en animación
+        if (isAnimating) return; 
+        isAnimating = true;      
 
         var follower = phoneModel.GetComponent<FollowPlayer>();
 
@@ -289,8 +289,8 @@ public class PhoneController : MonoBehaviour
 
         if (panelChat1 != null)
         {
-            panelChat1.SetActive(false); // Reset visual por si quedó mal
-            panelChat1.SetActive(true);  // Forzar reactivación
+            panelChat1.SetActive(false); 
+            panelChat1.SetActive(true);  
 
             RectTransform rt = panelChat1.GetComponent<RectTransform>();
             if (rt != null)
@@ -298,7 +298,7 @@ public class PhoneController : MonoBehaviour
                 rt.localScale = Vector3.one;
                 rt.anchoredPosition = Vector2.zero;
                 rt.sizeDelta = new Vector2(1000, 1800);
-                rt.SetAsLastSibling(); // Que quede arriba de todo
+                rt.SetAsLastSibling(); 
             }
 
             CanvasGroup cg = panelChat1.GetComponent<CanvasGroup>();
@@ -401,14 +401,14 @@ public class PhoneController : MonoBehaviour
                 cg.blocksRaycasts = true;
             }
 
-            botonChat.transform.SetAsLastSibling(); // Lo lleva al frente por si algo lo tapa
+            botonChat.transform.SetAsLastSibling(); 
 
             RectTransform rt = botonChat.GetComponent<RectTransform>();
             if (rt != null)
             {
                 rt.localScale = Vector3.one;
                 rt.anchoredPosition = Vector2.zero;
-                rt.sizeDelta = new Vector2(500, 200); // Ajusta si es necesario
+                rt.sizeDelta = new Vector2(500, 200); 
             }
         }
         else
@@ -597,7 +597,7 @@ public class PhoneController : MonoBehaviour
             {
                 rt.localScale = Vector3.one;
                 rt.anchoredPosition = Vector2.zero;
-                rt.sizeDelta = new Vector2(1000, 1800); // Tamaño grande seguro
+                rt.sizeDelta = new Vector2(1000, 1800); 
             }
 
             CanvasGroup cg = appMensajes.GetComponent<CanvasGroup>();
@@ -638,7 +638,7 @@ public class PhoneController : MonoBehaviour
 
     IEnumerator DesactivarNotificacionBloqueo()
     {
-        yield return new WaitForSeconds(4f); // ajustable
+        yield return new WaitForSeconds(4f); 
         if (panelNotificacionBloqueo != null)
             panelNotificacionBloqueo.SetActive(false);
     }
