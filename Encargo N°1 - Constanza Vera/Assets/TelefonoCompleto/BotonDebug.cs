@@ -21,6 +21,6 @@ public class BotonDebug : MonoBehaviour
 
         Button btn = GetComponent<Button>();
         if (btn != null)
-            Debug.Log("Botón listo: " + gameObject.name);
+            Debug.Log("Boton listo: " + gameObject.name);
     }
 }

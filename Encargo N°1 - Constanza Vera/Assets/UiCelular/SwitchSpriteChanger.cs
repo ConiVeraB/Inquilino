@@ -3,10 +3,10 @@ using UnityEngine.UI;
 
 public class SwitchSpriteChanger : MonoBehaviour
 {
-    public Toggle toggle;                 // Asigna el Toggle
-    public Image switchImage;            // La imagen que se cambia
-    public Sprite switchOnSprite;        // Imagen encendido
-    public Sprite switchOffSprite;       // Imagen apagado
+    public Toggle toggle;                 
+    public Image switchImage;            
+    public Sprite switchOnSprite;        
+    public Sprite switchOffSprite;       
     public ControladorLucesGrupo controladorLuces; 
 
 
@@ -15,7 +15,7 @@ public class SwitchSpriteChanger : MonoBehaviour
         if (toggle != null)
         {
             toggle.onValueChanged.AddListener(OnToggleChanged);
-            OnToggleChanged(toggle.isOn); // Setear estado inicial
+            OnToggleChanged(toggle.isOn); 
         }
     }
 
@@ -28,7 +28,7 @@ public class SwitchSpriteChanger : MonoBehaviour
 
         if (controladorLuces != null)
         {
-            controladorLuces.EncenderLuces(isOn); //  activa/apaga luces reales
+            controladorLuces.EncenderLuces(isOn); 
         }
     }
 

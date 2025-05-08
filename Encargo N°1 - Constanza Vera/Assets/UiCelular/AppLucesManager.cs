@@ -4,22 +4,22 @@ using UnityEngine.UI;
 public class AppLucesManager : MonoBehaviour
 {
     [Header("Luces de la escena")]
-    public GameObject[] luces; // Las luces físicas en la escena
+    public GameObject[] luces; 
 
     [Header("Toggles de la UI")]
-    public Toggle[] toggles; // Los toggles visuales que controla cada luz
+    public Toggle[] toggles; 
 
     void Start()
     {
-        // Asegura sincronización inicial entre luces y switches
+        
         for (int i = 0; i < luces.Length && i < toggles.Length; i++)
         {
-            int index = i; // evita el problema de referencia en el loop
+            int index = i; 
             bool estado = luces[i].activeSelf;
 
             toggles[i].isOn = estado;
 
-            // Se asegura de actualizar visual al comenzar
+            
             var visual = toggles[i].GetComponent<SwitchVisual>();
             if (visual != null) visual.ForceUpdate(estado);
 

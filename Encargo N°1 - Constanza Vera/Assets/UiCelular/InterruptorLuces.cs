@@ -15,19 +15,19 @@ public class InterruptorLuces : MonoBehaviour
         if (toggle != null)
         {
             toggle.onValueChanged.AddListener(CambiarEstado);
-            CambiarEstado(toggle.isOn); // Aplica el estado inicial
+            CambiarEstado(toggle.isOn); 
         }
     }
 
     public void CambiarEstado(bool encendido)
     {
-        // Cambiar sprite visual del switch
+        
         if (switchImage != null)
         {
             switchImage.sprite = encendido ? switchOnSprite : switchOffSprite;
         }
 
-        // Encender/apagar luces reales
+        
         foreach (Light luz in luces)
         {
             if (luz != null)

@@ -20,13 +20,13 @@ public class EnemyPatrol : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        // Intentamos colocar el destino después de un frame, cuando esté sobre el NavMesh
+        
         StartCoroutine(EsperarYAsignarDestino());
     }
 
     System.Collections.IEnumerator EsperarYAsignarDestino()
     {
-        // Esperar un frame completo
+       
         yield return null;
 
         if (!agent.isOnNavMesh)
@@ -56,11 +56,11 @@ public class EnemyPatrol : MonoBehaviour
 
             if (waitTimer >= waitTime)
             {
-                // Si está en el último punto, desaparecer
+                
                 if (currentPointIndex == patrolPoints.Length - 1)
                 {
                     Debug.Log("El Sujeto llegó al punto final y desaparece.");
-                    gameObject.SetActive(false); // Desaparece
+                    gameObject.SetActive(false); 
                     return;
                 }
 
