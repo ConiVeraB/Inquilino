@@ -15,6 +15,7 @@ public class Selected_Raycast : MonoBehaviour
         
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hit, distancia))
         {
+            Debug.DrawRay(transform.position, transform.forward * distancia, Color.red);
             DoorControllerV2 puerta = hit.transform.GetComponentInParent<DoorControllerV2>();
             if (puerta != null && Input.GetKeyDown(KeyCode.E))
             {
