@@ -18,6 +18,7 @@ public class DoorControllerV2 : MonoBehaviour
     }
 
     
+    //DOTween
     void Update()// Update is called once per frame
     {
         
