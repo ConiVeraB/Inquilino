@@ -715,6 +715,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fa5db800ba31bdd48a384e752d76b6f9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 300ad14fc995a23498858077a3d90329, type: 2}
     - target: {fileID: 919132149155446097, guid: fa5db800ba31bdd48a384e752d76b6f9, type: 3}
       propertyPath: m_Name
       value: alfombra 1
@@ -68867,7 +68871,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 942e77fc1ea9ab64ea84933a1a349c0f, type: 3}
+  - {fileID: 2100000, guid: 320c95af922a6574f86d251b4e2f087b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
