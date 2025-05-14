@@ -64,6 +64,10 @@ public class PhoneController : MonoBehaviour
     private Vector2 endTouchPosition;
     private bool isAnimating = false;
 
+
+    public AudioSource audioSource;
+    public AudioClip Touch;
+
     void Start()
     {
         phoneModel.SetActive(false);
@@ -80,6 +84,7 @@ public class PhoneController : MonoBehaviour
         horas = horaInicial;
         minutos = 0;
         ActualizarTextoHora();
+
 
     }
 
@@ -235,6 +240,7 @@ public class PhoneController : MonoBehaviour
         pantallaRecorte.SetActive(true);
         phoneUI.SetActive(true);
         cameraCelular.enabled = false;
+        PlayButtonSound();
     }
 
     void ActualizarReloj()
@@ -272,7 +278,7 @@ public class PhoneController : MonoBehaviour
 
     void DetectSwipe()
     {
-        if (Input.GetMouseButtonDown(0)) startTouchPosition = Input.mousePosition;
+        if (Input.GetMouseButtonDown(0)) startTouchPosition = Input.mousePosition; 
         if (Input.GetMouseButtonUp(0))
         {
             endTouchPosition = Input.mousePosition;
@@ -307,6 +313,7 @@ public class PhoneController : MonoBehaviour
                 cg.blocksRaycasts = true;
             }
         }
+        PlayButtonSound();
     }
 
     public void OpenSensorMovimientoApp()
@@ -335,6 +342,7 @@ public class PhoneController : MonoBehaviour
         pantallaRecorte?.SetActive(true);
         phoneUI?.SetActive(true);
         cameraCelular.enabled = false;
+        PlayButtonSound();
     }
 
     public void AbrirChat1()
@@ -375,6 +383,7 @@ public class PhoneController : MonoBehaviour
         pantallaRecorte?.SetActive(true);
         phoneUI?.SetActive(true);
         cameraCelular.enabled = false;
+        PlayButtonSound();
     }
 
 
@@ -415,8 +424,8 @@ public class PhoneController : MonoBehaviour
         pantallaRecorte?.SetActive(true);
         phoneUI?.SetActive(true);
         cameraCelular.enabled = false;
+       
 
-        
         Transform chatBtn = appMensajes.transform.Find("Btn_Chat1"); 
         if (chatBtn != null)
         {
@@ -470,7 +479,7 @@ public class PhoneController : MonoBehaviour
             Debug.LogWarning("BotonAbrirChat no encontrado.");
         }
 
-
+        PlayButtonSound();
     }
 
     public void AbrirChat2()
@@ -511,6 +520,7 @@ public class PhoneController : MonoBehaviour
         pantallaRecorte?.SetActive(true);
         phoneUI?.SetActive(true);
         cameraCelular.enabled = false;
+        PlayButtonSound();
     }
 
     public void VolverAMensajesDesdeChat2()
@@ -540,6 +550,7 @@ public class PhoneController : MonoBehaviour
         pantallaRecorte?.SetActive(true);
         phoneUI?.SetActive(true);
         cameraCelular.enabled = false;
+        PlayButtonSound();
     }
 
 
@@ -581,6 +592,7 @@ public class PhoneController : MonoBehaviour
         pantallaRecorte?.SetActive(true);
         phoneUI?.SetActive(true);
         cameraCelular.enabled = false;
+        PlayButtonSound();
     }
 
     public void VolverAMensajesDesdeChat3()
@@ -610,6 +622,7 @@ public class PhoneController : MonoBehaviour
         pantallaRecorte?.SetActive(true);
         phoneUI?.SetActive(true);
         cameraCelular.enabled = false;
+        PlayButtonSound();
     }
 
 
@@ -621,6 +634,7 @@ public class PhoneController : MonoBehaviour
         if (pantallaRecorte != null) pantallaRecorte.SetActive(true);
         if (phoneUI != null) phoneUI.SetActive(true);
         if (cameraCelular != null) cameraCelular.enabled = false;
+        PlayButtonSound();
     }
 
     public void VolverAlInicioDesdeSensor()
@@ -635,6 +649,7 @@ public class PhoneController : MonoBehaviour
 
         if (cameraCelular != null)
             cameraCelular.enabled = false;
+        PlayButtonSound();
     }
 
 
@@ -663,6 +678,7 @@ public class PhoneController : MonoBehaviour
             }
 
             Debug.Log("AppMensajes mostrada manualmente");
+            PlayButtonSound();
         }
 
         if (pantallaRecorte != null)
@@ -796,4 +812,10 @@ public class PhoneController : MonoBehaviour
 
 
     }
+
+    public void PlayButtonSound()
+    {
+        audioSource.PlayOneShot(audioSource.clip);
+    }
+   
 }

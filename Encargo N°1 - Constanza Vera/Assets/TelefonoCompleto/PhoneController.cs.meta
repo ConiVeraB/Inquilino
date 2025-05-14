@@ -1,2 +1,31 @@
 fileFormatVersion: 2
 guid: c2a6076fc1123794793f5b437dea29e9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - phoneModel: {instanceID: 0}
+  - phoneAnimator: {instanceID: 0}
+  - phoneUI: {instanceID: 0}
+  - phoneCanvasGroup: {instanceID: 0}
+  - flashlight: {instanceID: 0}
+  - pantallaRecorte: {instanceID: 0}
+  - panelBloqueo: {instanceID: 0}
+  - panelInicio: {instanceID: 0}
+  - panelCamara: {instanceID: 0}
+  - appLuces: {instanceID: 0}
+  - appMensajes: {instanceID: 0}
+  - panelSensorMovimiento: {instanceID: 0}
+  - panelChat1: {instanceID: 0}
+  - panelChat2: {instanceID: 0}
+  - panelChat3: {instanceID: 0}
+  - panelNotificacionBloqueo: {instanceID: 0}
+  - cameraCelular: {instanceID: 0}
+  - textoHora: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - tapSound: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

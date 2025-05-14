@@ -10,12 +10,16 @@ public class InterruptorLuces : MonoBehaviour
     public Sprite switchOffSprite;
     public Light[] luces;
 
+    [Header("Touch")]
+    public AudioSource audioSource;
+    public AudioClip touch;
+
     void Start()
     {
         if (toggle != null)
         {
             toggle.onValueChanged.AddListener(CambiarEstado);
-            CambiarEstado(toggle.isOn); 
+            CambiarEstado(toggle.isOn);
         }
     }
 
@@ -25,6 +29,7 @@ public class InterruptorLuces : MonoBehaviour
         if (switchImage != null)
         {
             switchImage.sprite = encendido ? switchOnSprite : switchOffSprite;
+            PlayButtonSound();
         }
 
         
@@ -32,7 +37,13 @@ public class InterruptorLuces : MonoBehaviour
         {
             if (luz != null)
                 luz.enabled = encendido;
+            PlayButtonSound();
         }
+    }
+
+    public void PlayButtonSound()
+    {
+        audioSource.PlayOneShot(audioSource.clip);
     }
 }
 
