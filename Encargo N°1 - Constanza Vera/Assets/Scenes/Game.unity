@@ -27778,7 +27778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonidosPresencia:
-  - clip: {fileID: 8300000, guid: 5e4249370e990e44f95bf683b32e141a, type: 3}
+  - clip: {fileID: 8300000, guid: 810195fd20e50a34290ca96adf266c20, type: 3}
     soloUnaVez: 1
     yaActivado: 0
     objetoAActivar: {fileID: 0}
@@ -53913,7 +53913,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 5c571d2cf010e6f40a46d474fe84620f, type: 3}
   m_Resource: {fileID: 8300000, guid: 5c571d2cf010e6f40a46d474fe84620f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.055
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -54004,7 +54004,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378583465}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a00723c2afdbe8a4daa49a47282079d7, type: 3}
   m_Name: 
@@ -54019,17 +54019,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378583465}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cce9150feb0a09438c653de6a87d800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footSteps: []
+  footstepClip: {fileID: 8300000, guid: 5c571d2cf010e6f40a46d474fe84620f, type: 3}
   footSource: {fileID: 1378583474}
-  stepInterval: 0.5
-  minPitch: 0.8
-  maxPitch: 1.2
-  movementThreshold: 0.01
+  stepInterval: 0.92
+  minPitch: 1.26
+  maxPitch: 1.19
+  movementThreshold: 0.07
 --- !u!1001 &1381449606
 PrefabInstance:
   m_ObjectHideFlags: 0

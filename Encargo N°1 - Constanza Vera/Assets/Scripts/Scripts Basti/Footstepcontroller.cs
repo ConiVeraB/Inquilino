@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class Footstepcontroller : MonoBehaviour
 {
-    public AudioClip[] footSteps;
+    public AudioClip footstepClip;         // Un solo audio
     public AudioSource footSource;
-    public float stepInterval = 0.5f;
-    public float minPitch = 0.8f;
-    public float maxPitch = 1.2f;
-    public float movementThreshold = 0.01f; // Para evitar pasos por movimientos mínimos
+
+    [Header("Paso configuraciones")]
+    public float stepInterval = 0.45f;     // Ritmo natural de caminar
+    public float minPitch = 0.88f;
+    public float maxPitch = 1.12f;
+    public float movementThreshold = 0.12f;
 
     private float stepTimer = 0f;
     private Vector3 lastPosition;
@@ -39,7 +41,8 @@ public class Footstepcontroller : MonoBehaviour
         }
         else
         {
-            stepTimer = 0f;
+            // Pausar el timer sin reiniciarlo del todo
+            stepTimer = Mathf.Min(stepTimer, stepInterval);
         }
 
         lastPosition = currentPosition;
@@ -47,11 +50,10 @@ public class Footstepcontroller : MonoBehaviour
 
     void PlayFootstep()
     {
-        if (footSteps.Length == 0) return;
+        if (footstepClip == null) return;
 
-        int randomClip = Random.Range(0, footSteps.Length);
-        footSource.clip = footSteps[randomClip];
         footSource.pitch = Random.Range(minPitch, maxPitch);
-        footSource.Play();
-    } 
+        footSource.volume = Random.Range(0.8f, 1f); // Opcional: variación de volumen
+        footSource.PlayOneShot(footstepClip);
+    }
 }
