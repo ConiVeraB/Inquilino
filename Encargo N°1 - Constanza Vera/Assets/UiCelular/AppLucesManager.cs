@@ -7,7 +7,7 @@ public class AppLucesManager : MonoBehaviour
     public GameObject[] luces; 
 
     [Header("Toggles de la UI")]
-    public Toggle[] toggles; 
+    public Toggle[] toggles;
 
     void Start()
     {

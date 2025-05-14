@@ -7455,6 +7455,8 @@ MonoBehaviour:
   switchOnSprite: {fileID: 21300000, guid: edb96f27c84477a41b4b581294179657, type: 3}
   switchOffSprite: {fileID: 21300000, guid: 6ba2b15e03fec694f86f59815b97e481, type: 3}
   controladorLuces: {fileID: 136916600}
+  audioSource: {fileID: 1566564356}
+  touch: {fileID: 8300000, guid: 95893029919a89d43b80e3f3c662699b, type: 3}
 --- !u!1001 &101012202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17317,6 +17319,8 @@ MonoBehaviour:
   - {fileID: 1173931890}
   - {fileID: 583247717}
   - {fileID: 2112860051}
+  audioSource: {fileID: 1566564356}
+  touch: {fileID: 8300000, guid: 95893029919a89d43b80e3f3c662699b, type: 3}
 --- !u!114 &346069860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17334,6 +17338,8 @@ MonoBehaviour:
   switchOnSprite: {fileID: 21300000, guid: edb96f27c84477a41b4b581294179657, type: 3}
   switchOffSprite: {fileID: 21300000, guid: 6ba2b15e03fec694f86f59815b97e481, type: 3}
   controladorLuces: {fileID: 136916600}
+  audioSource: {fileID: 0}
+  touch: {fileID: 0}
 --- !u!114 &346069861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25226,6 +25232,8 @@ MonoBehaviour:
   - {fileID: 2064684822}
   - {fileID: 2117748073}
   - {fileID: 257838079}
+  audioSource: {fileID: 1566564356}
+  touch: {fileID: 8300000, guid: 95893029919a89d43b80e3f3c662699b, type: 3}
 --- !u!114 &471370814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25243,6 +25251,8 @@ MonoBehaviour:
   switchOnSprite: {fileID: 21300000, guid: edb96f27c84477a41b4b581294179657, type: 3}
   switchOffSprite: {fileID: 21300000, guid: 6ba2b15e03fec694f86f59815b97e481, type: 3}
   controladorLuces: {fileID: 136916600}
+  audioSource: {fileID: 0}
+  touch: {fileID: 0}
 --- !u!114 &471370815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51570,7 +51580,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1980774832636919572, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
   m_PrefabInstance: {fileID: 2141708084}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1566564353}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2a6076fc1123794793f5b437dea29e9, type: 3}
@@ -57819,6 +57829,108 @@ MonoBehaviour:
   audioSource: {fileID: 1217486431}
   sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
   sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+--- !u!1 &1566564353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3297911168046892570, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
+  m_PrefabInstance: {fileID: 2141708084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1566564356
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566564353}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 95893029919a89d43b80e3f3c662699b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 95893029919a89d43b80e3f3c662699b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1573690706
 GameObject:
   m_ObjectHideFlags: 0
@@ -72252,6 +72364,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1980774832636919572, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
+      propertyPath: Touch
+      value: 
+      objectReference: {fileID: 8300000, guid: 95893029919a89d43b80e3f3c662699b, type: 3}
+    - target: {fileID: 1980774832636919572, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
       propertyPath: phoneUI
       value: 
       objectReference: {fileID: 1861115297}
@@ -72259,6 +72375,10 @@ PrefabInstance:
       propertyPath: appLuces
       value: 
       objectReference: {fileID: 1241054306}
+    - target: {fileID: 1980774832636919572, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
+      propertyPath: tapSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 95893029919a89d43b80e3f3c662699b, type: 3}
     - target: {fileID: 1980774832636919572, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
       propertyPath: textoHora
       value: 
@@ -72284,9 +72404,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1016053279}
     - target: {fileID: 1980774832636919572, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
+      propertyPath: touchSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 95893029919a89d43b80e3f3c662699b, type: 3}
+    - target: {fileID: 1980774832636919572, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
       propertyPath: appMensajes
       value: 
       objectReference: {fileID: 749189874}
+    - target: {fileID: 1980774832636919572, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1566564356}
     - target: {fileID: 1980774832636919572, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
       propertyPath: panelCamara
       value: 
@@ -72315,6 +72443,10 @@ PrefabInstance:
       propertyPath: phoneCanvasGroup
       value: 
       objectReference: {fileID: 1262205950}
+    - target: {fileID: 1980774832636919572, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
+      propertyPath: touchAudioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1980774832636919572, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
       propertyPath: segundosPorMinuto
       value: 15
@@ -72382,7 +72514,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3297911168046892570, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1566564356}
   m_SourcePrefab: {fileID: 100100000, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
 --- !u!1001 &2141868255
 PrefabInstance:

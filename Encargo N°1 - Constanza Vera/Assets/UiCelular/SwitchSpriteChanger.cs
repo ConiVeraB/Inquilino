@@ -9,6 +9,9 @@ public class SwitchSpriteChanger : MonoBehaviour
     public Sprite switchOffSprite;       
     public ControladorLucesGrupo controladorLuces; 
 
+    public AudioSource audioSource;
+    public AudioClip touch;
+
 
     void Start()
     {
@@ -30,6 +33,12 @@ public class SwitchSpriteChanger : MonoBehaviour
         {
             controladorLuces.EncenderLuces(isOn); 
         }
+        PlayButtonSound();
+    }
+
+    public void PlayButtonSound()
+    {
+        audioSource.PlayOneShot(audioSource.clip);
     }
 
 }
