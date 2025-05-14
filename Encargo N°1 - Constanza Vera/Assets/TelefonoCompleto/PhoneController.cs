@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
+
 
 public class PhoneController : MonoBehaviour
 {
@@ -40,6 +42,17 @@ public class PhoneController : MonoBehaviour
     public float unlockAnimationDuration = 0.4f;
     public float phoneMoveDuration = 0.5f;
 
+    [Header("Reloj del Teléfono")]
+    public TextMeshProUGUI textoHora;
+    public int horaInicial = 18;
+    public float segundosPorMinuto = 20f;
+
+    private int horas;
+    private int minutos;
+    private float tiempoAcumulado;
+
+
+
     [Header("Animación de teléfono al desbloquear")]
     public Vector3 phoneStartPosition = new Vector3(0, -0.5f, 2f);
     public Vector3 phoneEndPosition = new Vector3(0, 0f, 0.4f);
@@ -63,6 +76,11 @@ public class PhoneController : MonoBehaviour
 
         phoneModel.transform.localPosition = phoneStartPosition;
         phoneModel.transform.localScale = phoneStartScale;
+
+        horas = horaInicial;
+        minutos = 0;
+        ActualizarTextoHora();
+
     }
 
     void Update()
@@ -76,6 +94,9 @@ public class PhoneController : MonoBehaviour
         {
             DetectSwipe();
         }
+
+        ActualizarReloj();
+
     }
 
 
@@ -215,6 +236,39 @@ public class PhoneController : MonoBehaviour
         phoneUI.SetActive(true);
         cameraCelular.enabled = false;
     }
+
+    void ActualizarReloj()
+    {
+        tiempoAcumulado += Time.deltaTime;
+
+        if (tiempoAcumulado >= segundosPorMinuto)
+        {
+            tiempoAcumulado = 0f;
+            minutos++;
+
+            if (minutos >= 60)
+            {
+                minutos = 0;
+                horas++;
+                if (horas >= 24)
+                    horas = 0;
+            }
+
+            ActualizarTextoHora();
+        }
+    }
+
+
+    void ActualizarTextoHora()
+    {
+        if (textoHora != null)
+        {
+            string horaFormateada = string.Format("{0:00}:{1:00}", horas, minutos);
+            textoHora.text = horaFormateada;
+        }
+    }
+
+
 
     void DetectSwipe()
     {

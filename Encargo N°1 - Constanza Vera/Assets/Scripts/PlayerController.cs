@@ -75,8 +75,11 @@ public class PlayerController : MonoBehaviour
 
     void MovimientoCamara()
     {
-        float mouseX = Input.GetAxis("Mouse X") * sensibilidadMouse;
-        float mouseY = Input.GetAxis("Mouse Y") * sensibilidadMouse;
+
+
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
+
 
         // Rotar el personaje en el eje horizontal (Yaw)
         transform.Rotate(Vector3.up * mouseX);
