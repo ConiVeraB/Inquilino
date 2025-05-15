@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 
 [System.Serializable]
 public class DatosLlamada
@@ -34,6 +35,10 @@ public class LlamadaManager : MonoBehaviour
 
     [Header("Audio conversación")]
     public AudioSource audioConversacion; // Audio para reproducir durante la llamada
+
+    [Header("Cortar/Contestar")]
+    public AudioSource audioSource;
+    public AudioClip Touch;
 
     [Header("Vibración")]
     public RectTransform imagenAVibrar;
@@ -129,6 +134,7 @@ public class LlamadaManager : MonoBehaviour
             audioConversacion.Play();
             StartCoroutine(EsperarFinConversacion(llamada.audioConversacion.length, llamada));
         }
+        PlayButtonSound();
     }
 
     IEnumerator ContarDuracionLlamada(DatosLlamada llamada)
@@ -148,6 +154,7 @@ public class LlamadaManager : MonoBehaviour
 
             yield return null;
         }
+        PlayButtonSound();
     }
 
     IEnumerator EsperarFinConversacion(float duracion, DatosLlamada llamada)
@@ -168,7 +175,7 @@ public class LlamadaManager : MonoBehaviour
 
         if (llamadaActiva != null)
             StopCoroutine(llamadaActiva);
-
+        PlayButtonSound();
         FinalizarLlamada(llamada);
     }
 
@@ -179,5 +186,9 @@ public class LlamadaManager : MonoBehaviour
 
         indiceActual++;
         llamadaEnCurso = false;
+    }
+    public void PlayButtonSound()
+    {
+        audioSource.PlayOneShot(audioSource.clip);
     }
 }
