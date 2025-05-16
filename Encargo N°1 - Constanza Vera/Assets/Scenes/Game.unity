@@ -9017,7 +9017,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.26773936
+      value: 0.26204455
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9025,7 +9025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5224
+      value: 2.48
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16866,7 +16866,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 62af4f93d54a4e2438e1766792e58ecd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3525879
+      value: 1.3680074
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62af4f93d54a4e2438e1766792e58ecd, type: 3}
       propertyPath: m_LocalScale.z
@@ -16882,7 +16882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62af4f93d54a4e2438e1766792e58ecd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.4470005
+      value: -1.472
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62af4f93d54a4e2438e1766792e58ecd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17391,10 +17391,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 330585543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e3083ba14070e24ba332d839116a7d4, type: 3}
+  m_Script: {fileID: 11500000, guid: dfe47dc82861e14429381ba2f639980e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distancia: 3
+  distancia: 6
 --- !u!1 &340766832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 74d42073dc0f3ce4884405b451cc7e06, type: 3}
@@ -19600,7 +19600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.26660886
+      value: 0.2652588
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19608,7 +19608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5166
+      value: 2.466
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25569,7 +25569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5163
+      value: 2.449
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41718,7 +41718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5208
+      value: 2.486
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -48981,6 +48981,7 @@ GameObject:
   - component: {fileID: 1117932985}
   - component: {fileID: 1117932986}
   - component: {fileID: 1117932987}
+  - component: {fileID: 1117932988}
   m_Layer: 0
   m_Name: PivotDoorWhite (5)
   m_TagString: Untagged
@@ -49012,7 +49013,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117932984}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e4a747c00d9f8b146ac47f86d0a05694, type: 2}
   m_CullingMode: 0
@@ -49041,6 +49042,21 @@ MonoBehaviour:
   audioSource: {fileID: 778698160}
   sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
   sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+--- !u!114 &1117932988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117932984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582c10134a6020e47a2c18f46519d7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 90
+  closeAngle: 0
+  curveAnimation: 10
 --- !u!1001 &1118466971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51052,8 +51068,9 @@ GameObject:
   - component: {fileID: 1232268797}
   - component: {fileID: 1232268798}
   - component: {fileID: 1232268799}
+  - component: {fileID: 1232268800}
   m_Layer: 0
-  m_Name: PivotDoorWhite (3)
+  m_Name: PivotDoorWhite (3) neg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51068,7 +51085,7 @@ Transform:
   m_GameObject: {fileID: 1232268796}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -149.32, y: 4.536, z: 3.56}
+  m_LocalPosition: {x: -149.32, y: 4.52, z: 3.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51083,7 +51100,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232268796}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: df7c22fee0949e3449512cc5ace8046c, type: 2}
   m_CullingMode: 0
@@ -51112,6 +51129,21 @@ MonoBehaviour:
   audioSource: {fileID: 1152657091}
   sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
   sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+--- !u!114 &1232268800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232268796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efaf6c4677e369543bc4819dc41711cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: -90
+  closeAngle: 0
+  curveAnimation: 10
 --- !u!1 &1241054306
 GameObject:
   m_ObjectHideFlags: 0
@@ -53708,6 +53740,7 @@ GameObject:
   - component: {fileID: 1338584788}
   - component: {fileID: 1338584789}
   - component: {fileID: 1338584790}
+  - component: {fileID: 1338584791}
   m_Layer: 0
   m_Name: PivotDoorWhite (4)
   m_TagString: Untagged
@@ -53739,7 +53772,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338584787}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d4ce71d5415052e48a80d77a4de692df, type: 2}
   m_CullingMode: 0
@@ -53768,6 +53801,21 @@ MonoBehaviour:
   audioSource: {fileID: 231805452}
   sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
   sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+--- !u!114 &1338584791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338584787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582c10134a6020e47a2c18f46519d7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 90
+  closeAngle: 0
+  curveAnimation: 10
 --- !u!1 &1343239041
 GameObject:
   m_ObjectHideFlags: 0
@@ -56417,6 +56465,7 @@ GameObject:
   - component: {fileID: 1469592095}
   - component: {fileID: 1469592096}
   - component: {fileID: 1469592097}
+  - component: {fileID: 1469592098}
   m_Layer: 0
   m_Name: PivotDoorWhite (7)
   m_TagString: Untagged
@@ -56433,7 +56482,7 @@ Transform:
   m_GameObject: {fileID: 1469592094}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.43258935, z: 0, w: 0.90159106}
-  m_LocalPosition: {x: -160.934, y: 4.858, z: 7.958}
+  m_LocalPosition: {x: -160.934, y: 4.86, z: 7.958}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -56448,7 +56497,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469592094}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a98b034dd612dc846b6b76ccf1ba57d4, type: 2}
   m_CullingMode: 0
@@ -56477,6 +56526,21 @@ MonoBehaviour:
   audioSource: {fileID: 1812426464}
   sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
   sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+--- !u!114 &1469592098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469592094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582c10134a6020e47a2c18f46519d7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 140
+  closeAngle: 51.264
+  curveAnimation: 10
 --- !u!4 &1470563520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 600562590540787179, guid: 5b28df8e610daff4398f5436d27cf061, type: 3}
@@ -58101,8 +58165,9 @@ GameObject:
   - component: {fileID: 1557731435}
   - component: {fileID: 1557731437}
   - component: {fileID: 1557731436}
+  - component: {fileID: 1557731438}
   m_Layer: 0
-  m_Name: PivotDoorWhite (6)
+  m_Name: PivotDoorWhite (6) neg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58147,7 +58212,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557731434}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 24e341ef217458b488e6fcc100f82d7e, type: 2}
   m_CullingMode: 0
@@ -58161,6 +58226,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1557731438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557731434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efaf6c4677e369543bc4819dc41711cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: -90
+  closeAngle: 0
+  curveAnimation: 10
 --- !u!1001 &1558946022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58357,6 +58437,7 @@ GameObject:
   - component: {fileID: 1562419740}
   - component: {fileID: 1562419741}
   - component: {fileID: 1562419742}
+  - component: {fileID: 1562419743}
   m_Layer: 0
   m_Name: PivotDoorWhite
   m_TagString: Untagged
@@ -58373,7 +58454,7 @@ Transform:
   m_GameObject: {fileID: 1562419739}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -148.81927, y: 4.58, z: -12.603}
+  m_LocalPosition: {x: -148.81927, y: 4.56, z: -12.603}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -58388,7 +58469,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562419739}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 517c3d859d7ccfe4caaf14fe932887b0, type: 2}
   m_CullingMode: 0
@@ -58417,6 +58498,21 @@ MonoBehaviour:
   audioSource: {fileID: 1217486431}
   sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
   sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+--- !u!114 &1562419743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562419739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582c10134a6020e47a2c18f46519d7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 90
+  closeAngle: 0
+  curveAnimation: 10
 --- !u!1 &1566564353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3297911168046892570, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
@@ -64695,6 +64791,7 @@ GameObject:
   - component: {fileID: 1911993693}
   - component: {fileID: 1911993694}
   - component: {fileID: 1911993695}
+  - component: {fileID: 1911993696}
   m_Layer: 0
   m_Name: PivotDoorWhite (1)
   m_TagString: Untagged
@@ -64711,7 +64808,7 @@ Transform:
   m_GameObject: {fileID: 1911993692}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -150.58, y: 4.57, z: 23.91}
+  m_LocalPosition: {x: -150.58, y: 4.53, z: 23.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -64726,7 +64823,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911993692}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 778cbfc8bc4bdc641ae72f28978dadf3, type: 2}
   m_CullingMode: 0
@@ -64755,6 +64852,21 @@ MonoBehaviour:
   audioSource: {fileID: 701737456}
   sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
   sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+--- !u!114 &1911993696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911993692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582c10134a6020e47a2c18f46519d7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 90
+  closeAngle: 0
+  curveAnimation: 10
 --- !u!1001 &1912823419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65708,7 +65820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5135
+      value: 2.473
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -66319,7 +66431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2648469
+      value: 0.2633452
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66327,7 +66439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5153
+      value: 2.455
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -72062,6 +72174,7 @@ GameObject:
   - component: {fileID: 2075532886}
   - component: {fileID: 2075532887}
   - component: {fileID: 2075532888}
+  - component: {fileID: 2075532889}
   m_Layer: 0
   m_Name: PivotMainDoor
   m_TagString: Untagged
@@ -72093,7 +72206,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075532885}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 503f13d3e55e5c042977464dcb7a060d, type: 2}
   m_CullingMode: 0
@@ -72122,6 +72235,21 @@ MonoBehaviour:
   audioSource: {fileID: 1359890911}
   sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
   sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+--- !u!114 &2075532889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075532885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582c10134a6020e47a2c18f46519d7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 90
+  closeAngle: 0
+  curveAnimation: 10
 --- !u!108 &2086309929 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 6199426131916089232, guid: 26573752429e69b43be8c03944786f84, type: 3}
@@ -72243,6 +72371,7 @@ GameObject:
   - component: {fileID: 2102686269}
   - component: {fileID: 2102686270}
   - component: {fileID: 2102686271}
+  - component: {fileID: 2102686272}
   m_Layer: 0
   m_Name: PivotDoorWhite (2)
   m_TagString: Untagged
@@ -72274,7 +72403,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102686268}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 215839f0fe6e7cc4293aecd5b8605505, type: 2}
   m_CullingMode: 0
@@ -72303,6 +72432,21 @@ MonoBehaviour:
   audioSource: {fileID: 1743234827}
   sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
   sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+--- !u!114 &2102686272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102686268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582c10134a6020e47a2c18f46519d7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 90
+  closeAngle: 0
+  curveAnimation: 10
 --- !u!1 &2104582486
 GameObject:
   m_ObjectHideFlags: 0
@@ -72463,7 +72607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.26718298
+      value: 0.26215363
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -72471,7 +72615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.4362
+      value: 2.451
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a236a14341d6824b87ebc144ca422f4, type: 3}
       propertyPath: m_LocalPosition.z
