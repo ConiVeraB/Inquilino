@@ -49034,7 +49034,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117932984}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 120ec53e9224fb648884966520a4e90e, type: 3}
   m_Name: 
@@ -49057,6 +49057,9 @@ MonoBehaviour:
   openAngle: 90
   closeAngle: 0
   curveAnimation: 10
+  puerta: {fileID: 778698160}
+  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
 --- !u!1001 &1118466971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51121,7 +51124,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232268796}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 120ec53e9224fb648884966520a4e90e, type: 3}
   m_Name: 
@@ -51144,6 +51147,9 @@ MonoBehaviour:
   openAngle: -90
   closeAngle: 0
   curveAnimation: 10
+  puerta: {fileID: 1152657091}
+  abrirPuertas: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  cerrarPuertas: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
 --- !u!1 &1241054306
 GameObject:
   m_ObjectHideFlags: 0
@@ -53793,7 +53799,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338584787}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 120ec53e9224fb648884966520a4e90e, type: 3}
   m_Name: 
@@ -53816,6 +53822,9 @@ MonoBehaviour:
   openAngle: 90
   closeAngle: 0
   curveAnimation: 10
+  puerta: {fileID: 231805452}
+  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
 --- !u!1 &1343239041
 GameObject:
   m_ObjectHideFlags: 0
@@ -54672,7 +54681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footstepClip: {fileID: 8300000, guid: 4dad5686fdce73543a8499351aaa24ce, type: 3}
   footSource: {fileID: 1378583474}
-  stepInterval: 0.94
+  stepInterval: 0.64
   minPitch: 0.96
   maxPitch: 1.19
   movementThreshold: 0.07
@@ -56518,7 +56527,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469592094}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 120ec53e9224fb648884966520a4e90e, type: 3}
   m_Name: 
@@ -56541,6 +56550,9 @@ MonoBehaviour:
   openAngle: 140
   closeAngle: 51.264
   curveAnimation: 10
+  puerta: {fileID: 1812426464}
+  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
 --- !u!4 &1470563520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 600562590540787179, guid: 5b28df8e610daff4398f5436d27cf061, type: 3}
@@ -58196,7 +58208,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557731434}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 120ec53e9224fb648884966520a4e90e, type: 3}
   m_Name: 
@@ -58241,6 +58253,9 @@ MonoBehaviour:
   openAngle: -90
   closeAngle: 0
   curveAnimation: 10
+  puerta: {fileID: 188631951}
+  abrirPuertas: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  cerrarPuertas: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
 --- !u!1001 &1558946022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58490,7 +58505,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562419739}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 120ec53e9224fb648884966520a4e90e, type: 3}
   m_Name: 
@@ -58513,6 +58528,9 @@ MonoBehaviour:
   openAngle: 90
   closeAngle: 0
   curveAnimation: 10
+  puerta: {fileID: 1217486431}
+  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
 --- !u!1 &1566564353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3297911168046892570, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
@@ -64844,7 +64862,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911993692}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 120ec53e9224fb648884966520a4e90e, type: 3}
   m_Name: 
@@ -64867,6 +64885,9 @@ MonoBehaviour:
   openAngle: 90
   closeAngle: 0
   curveAnimation: 10
+  puerta: {fileID: 701737456}
+  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
 --- !u!1001 &1912823419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72173,7 +72194,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2075532886}
   - component: {fileID: 2075532887}
-  - component: {fileID: 2075532888}
   - component: {fileID: 2075532889}
   m_Layer: 0
   m_Name: PivotMainDoor
@@ -72220,21 +72240,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2075532888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075532885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 120ec53e9224fb648884966520a4e90e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 1359890911}
-  sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
 --- !u!114 &2075532889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72250,6 +72255,9 @@ MonoBehaviour:
   openAngle: 90
   closeAngle: 0
   curveAnimation: 10
+  puerta: {fileID: 1359890911}
+  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
 --- !u!108 &2086309929 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 6199426131916089232, guid: 26573752429e69b43be8c03944786f84, type: 3}
@@ -72424,7 +72432,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102686268}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 120ec53e9224fb648884966520a4e90e, type: 3}
   m_Name: 
@@ -72447,6 +72455,9 @@ MonoBehaviour:
   openAngle: 90
   closeAngle: 0
   curveAnimation: 10
+  puerta: {fileID: 1743234827}
+  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
 --- !u!1 &2104582486
 GameObject:
   m_ObjectHideFlags: 0
