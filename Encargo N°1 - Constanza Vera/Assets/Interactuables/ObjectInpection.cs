@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class ObjectInspection : MonoBehaviour
 {
@@ -15,6 +17,12 @@ public class ObjectInspection : MonoBehaviour
     [Header("Lectura durante inspección")]
     public GameObject readPrompt;  // Texto "Presiona R para Leer"
     public GameObject readImage;   // Imagen con contenido de lectura
+    
+    [Header("Layer de enfoque sin post-procesado")]
+    public string focusLayerName = "FocusedObject"; // debe existir en el proyecto
+
+    private int originalLayer;
+    public Volume postProcessVolume;
 
     [Header("Movimiento hacia el centro")]
     public float moveSpeed = 10f;
@@ -37,6 +45,9 @@ public class ObjectInspection : MonoBehaviour
 
         if (readImage != null)
             readImage.SetActive(false);
+
+        if (postProcessVolume != null)
+            postProcessVolume.enabled = false;
     }
 
     void Update()
@@ -44,6 +55,7 @@ public class ObjectInspection : MonoBehaviour
         if (isInRange && !isInspecting && Input.GetKeyDown(KeyCode.E))
         {
             StartInspection();
+            
         }
         else if (isInspecting && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Escape)))
         {
@@ -87,6 +99,10 @@ public class ObjectInspection : MonoBehaviour
         originalPosition = transform.position;
         originalRotation = transform.rotation;
 
+        originalLayer = gameObject.layer;
+        gameObject.layer = LayerMask.NameToLayer(focusLayerName);
+
+
         if (interactionImage != null)
             interactionImage.SetActive(false);
 
@@ -104,6 +120,11 @@ public class ObjectInspection : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        if (postProcessVolume != null)
+        {
+            postProcessVolume.enabled = true;  // Activa el efecto al comenzar inspección
+        }
     }
 
     void EndInspection()
@@ -113,6 +134,7 @@ public class ObjectInspection : MonoBehaviour
 
         transform.position = originalPosition;
         transform.rotation = originalRotation;
+        gameObject.layer = originalLayer;
 
         if (playerMovementScript != null)
             playerMovementScript.enabled = true;
@@ -131,6 +153,11 @@ public class ObjectInspection : MonoBehaviour
 
         if (isInRange && interactionImage != null)
             interactionImage.SetActive(true);
+
+        if (postProcessVolume != null)
+        {
+            postProcessVolume.enabled = false;  // Desactiva el efecto al terminar inspección
+        }
     }
 
     void RotateObject()
