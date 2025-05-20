@@ -12,7 +12,7 @@ public class ObjectInspection : MonoBehaviour
 
     [Header("Control del jugador")]
     public MonoBehaviour playerMovementScript;
-    public MonoBehaviour cameraLookScript;
+    public FirstPersonCamera cameraLookScript;
 
     [Header("Lectura durante inspección")]
     public GameObject readPrompt;  // Texto "Presiona R para Leer"
@@ -101,7 +101,7 @@ public class ObjectInspection : MonoBehaviour
 
         originalLayer = gameObject.layer;
         gameObject.layer = LayerMask.NameToLayer(focusLayerName);
-
+        cameraLookScript.LookObjectCamera.SetActive(true);  
 
         if (interactionImage != null)
             interactionImage.SetActive(false);
@@ -150,6 +150,7 @@ public class ObjectInspection : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        cameraLookScript.LookObjectCamera.SetActive(false);
 
         if (isInRange && interactionImage != null)
             interactionImage.SetActive(true);

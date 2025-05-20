@@ -35,20 +35,13 @@ public class Photos : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) && !isDisplayingPhoto && IsPhoneActive())
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !isDisplayingPhoto )
         {
             TakePhoto();
         }
     }
 
-    private bool IsPhoneActive()
-    {
-        if (phoneSystem != null && phoneSystem.Phone != null)
-        {
-            return phoneSystem.Phone.activeSelf;
-        }
-        return false; // Si no hay PhoneSystem o Phone, asume que no está activo.
-    }
+   
 
     void TakePhoto()
     {

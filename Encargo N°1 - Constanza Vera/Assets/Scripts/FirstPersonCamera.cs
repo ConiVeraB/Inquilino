@@ -6,7 +6,7 @@ public class FirstPersonCamera : MonoBehaviour
 {
     [Header("Camera")]
     public Transform cameraHolder; // asigna aquí el objeto "CameraHolder"
-
+    public GameObject LookObjectCamera;
     [Header("Sensitivity")]
     public float mouseSensitivity = 2.5f;
     public float smoothing = 5f;
@@ -16,6 +16,9 @@ public class FirstPersonCamera : MonoBehaviour
     private Vector2 smoothedVelocity;
     private Vector2 currentLookingPos;
 
+    [Header("Phone")]
+    public PhoneController phoneController;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -24,6 +27,8 @@ public class FirstPersonCamera : MonoBehaviour
 
     void Update()
     {
+        if (phoneController.isPhoneActive) return;
+
         Vector2 mouseInput = new Vector2(
             Input.GetAxisRaw("Mouse X"),
             Input.GetAxisRaw("Mouse Y")

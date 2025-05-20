@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private float rotaciónYActual; // Valor suavizado de la rotación vertical
 
+    public bool usingPhone;
     public DialogueManager dialogueManager;
     public ObjetiveManager objetiveManager;
 
@@ -48,9 +49,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(usingPhone)
+        {
         HorizontalInput = Input.GetAxis("Horizontal") * speed;
         VerticalInput = Input.GetAxis("Vertical") * speed;
         MovimientoCamara();
+
+        }
     }
 
     void FixedUpdate()
@@ -59,18 +64,19 @@ public class PlayerController : MonoBehaviour
         Vector3 right = camara.transform.right * HorizontalInput;
         Vector3 movimiento = (forward + right) * Time.fixedDeltaTime;  // Escala por el tiempo fijo
         rb.MovePosition(transform.position + movimiento);*/
+        if (usingPhone)
+        {
+            Vector3 camForward = camara.transform.forward;
+            camForward.y = 0;
+            camForward.Normalize(); // vuelve a normalizar el vector para que no pierda dirección
 
-        Vector3 camForward = camara.transform.forward;
-        camForward.y = 0;
-        camForward.Normalize(); // vuelve a normalizar el vector para que no pierda dirección
+            Vector3 camRight = camara.transform.right;
+            camRight.y = 0;
+            camRight.Normalize();
 
-        Vector3 camRight = camara.transform.right;
-        camRight.y = 0;
-        camRight.Normalize();
-
-        Vector3 movimiento = (camForward * VerticalInput + camRight * HorizontalInput) * Time.fixedDeltaTime;
-        rb.MovePosition(transform.position + movimiento);
-
+            Vector3 movimiento = (camForward * VerticalInput + camRight * HorizontalInput) * Time.fixedDeltaTime;
+            rb.MovePosition(transform.position + movimiento);
+        }
     }
 
     void MovimientoCamara()

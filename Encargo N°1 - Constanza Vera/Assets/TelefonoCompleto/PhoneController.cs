@@ -11,7 +11,7 @@ public class PhoneController : MonoBehaviour
     public GameObject phoneUI;
     public CanvasGroup phoneCanvasGroup;
     private Coroutine notificacionCoroutine;
-
+    [SerializeField]PlayerController playerController;
 
     [Header("Configuraciones de linterna")]
     public GameObject flashlight;
@@ -56,10 +56,10 @@ public class PhoneController : MonoBehaviour
     [Header("Animación de teléfono al desbloquear")]
     public Vector3 phoneStartPosition = new Vector3(0, -0.5f, 2f);
     public Vector3 phoneEndPosition = new Vector3(0, 0f, 0.4f);
-    public Vector3 phoneStartScale = Vector3.one;
+    public Vector3 phoneStartScale = new Vector3(0.1f, 0.1f,0.1f);
     public Vector3 phoneEndScale = new Vector3(1.8f, 1.8f, 1.8f);
 
-    private bool isPhoneActive = false;
+    public bool isPhoneActive = false;
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
     private bool isAnimating = false;
@@ -79,7 +79,6 @@ public class PhoneController : MonoBehaviour
         if (cameraCelular != null) cameraCelular.enabled = false;
 
         phoneModel.transform.localPosition = phoneStartPosition;
-        phoneModel.transform.localScale = phoneStartScale;
 
         horas = horaInicial;
         minutos = 0;
@@ -93,6 +92,7 @@ public class PhoneController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab) && !isAnimating)
         {
             TogglePhone();
+            playerController.usingPhone = !playerController.usingPhone;
         }
 
         if (isPhoneActive)
@@ -111,11 +111,11 @@ public class PhoneController : MonoBehaviour
         isAnimating = true;      
 
         var follower = phoneModel.GetComponent<FollowPlayer>();
-
+        
         if (!isPhoneActive)
         {
             Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
             isPhoneActive = true;
 
             phoneModel.transform.localScale = phoneStartScale;
@@ -724,7 +724,7 @@ public class PhoneController : MonoBehaviour
 
             RectTransform bloqueoTransform = panelBloqueo.GetComponent<RectTransform>();
             CanvasGroup bloqueoCanvasGroup = panelBloqueo.GetComponent<CanvasGroup>();
-
+            
             Vector2 startPos = bloqueoTransform.anchoredPosition;
             Vector2 endPos = startPos + new Vector2(0, 1000);
             float elapsedTime = 0f;
@@ -741,6 +741,7 @@ public class PhoneController : MonoBehaviour
 
             bloqueoTransform.anchoredPosition = endPos;
             if (bloqueoCanvasGroup != null) bloqueoCanvasGroup.alpha = 0f;
+           
             panelBloqueo.SetActive(false);
 
             StartCoroutine(AnimatePhoneToCenter());

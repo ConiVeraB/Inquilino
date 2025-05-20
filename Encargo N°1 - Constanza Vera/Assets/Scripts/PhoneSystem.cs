@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PhoneSystem : MonoBehaviour
 {
-    public GameObject Phone;
     public float Delay = 2f;
     public Sprite Sprite;
     public Button Accept;
@@ -19,7 +18,7 @@ public class PhoneSystem : MonoBehaviour
     public Text replyText;
     public Image Rereply;
     public Text RereplyText;
-
+    
     [Header("## PHOTOS ##")]
     public List<Texture2D> photos = new();
 
@@ -30,7 +29,6 @@ public class PhoneSystem : MonoBehaviour
         Rereply.gameObject.SetActive(false);
       
 
-        Phone.SetActive(true);
         Accept.onClick.AddListener(AcceptCall);
         Decline.onClick.AddListener(DeclineCall);
     }
@@ -39,17 +37,7 @@ public class PhoneSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (Phone != null)
-            {
-                if (!Phone.activeSelf)
-                {
-                    Phone.SetActive(true); // Muestra el teléfono inmediatamente
-                }
-                else
-                {
-                    StartCoroutine(HidePhoneAfterDelay()); // Espera 2 segundos antes de ocultarlo
-                }
-            }
+           
         }
 
 
@@ -58,7 +46,7 @@ public class PhoneSystem : MonoBehaviour
     IEnumerator HidePhoneAfterDelay()
     {
         yield return new WaitForSeconds(Delay); // Espera 2 segundos
-        Phone.SetActive(false); // Oculta el teléfono
+      //  Phone.SetActive(false); // Oculta el teléfono
     }
 
     void AcceptCall()
@@ -67,12 +55,10 @@ public class PhoneSystem : MonoBehaviour
         {
             dialogueManager.StartDialogue(); // Inicia el diálogo
         }
-        Phone.SetActive(true); 
     }
 
     void DeclineCall()
     {
-        Phone.SetActive(false); // Solo cierra el teléfono sin iniciar diálogo
     }
 
     public void HidePhoneElements()
@@ -80,7 +66,6 @@ public class PhoneSystem : MonoBehaviour
         phoneBackground.SetActive(false);
         Accept.gameObject.SetActive(false);
         Decline.gameObject.SetActive(false);
-        Phone.SetActive(false);
     }
 
     public void ActivarImagen()
@@ -96,7 +81,6 @@ public class PhoneSystem : MonoBehaviour
 
         // Activa victorChat y Phone después del retraso
         victorChat.gameObject.SetActive(true);
-        Phone.SetActive(true);
         reply.gameObject.SetActive(true);
         Rereply.gameObject.SetActive(true);
     }
