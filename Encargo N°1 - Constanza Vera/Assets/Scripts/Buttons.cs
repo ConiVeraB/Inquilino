@@ -7,6 +7,16 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("Game"); 
     }
 
+    public void Loadscene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void Volver()
+    {
+        SceneManager.LoadScene("Main Menú");
+    }
+
     public void Quit()
     {
         Application.Quit();

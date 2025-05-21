@@ -59026,10 +59026,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footstepClip: {fileID: 8300000, guid: 4dad5686fdce73543a8499351aaa24ce, type: 3}
   footSource: {fileID: 1378583474}
-  stepInterval: 0.71
-  minPitch: 0.87
-  maxPitch: 1.23
-  movementThreshold: 0.07
+  stepDistance: 3.59
+  minPitch: 0.99
+  maxPitch: 1.64
+  minVolume: 0.82
+  maxVolume: 1
+  movementThreshold: 0.09
 --- !u!1001 &1381449606
 PrefabInstance:
   m_ObjectHideFlags: 0
