@@ -9202,6 +9202,7 @@ GameObject:
   - component: {fileID: 154637886}
   - component: {fileID: 154637885}
   - component: {fileID: 154637889}
+  - component: {fileID: 154637890}
   - component: {fileID: 154637891}
   m_Layer: 5
   m_Name: CanvasPausa
@@ -9307,6 +9308,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 807824164}
   cameraScript: {fileID: 1378583472}
+--- !u!114 &154637890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154637884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575ccdd3957ae1e4b8c5f6022e9ffc3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!225 &154637891
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10183,6 +10196,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8001800981929428112, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 808071727}
     - targetCorrespondingSourceObject: {fileID: 4707483527643585453, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1241054307}
@@ -16672,54 +16688,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235524993}
   m_CullTransparentMesh: 1
---- !u!1 &236590686
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 236590688}
-  - component: {fileID: 236590687}
-  m_Layer: 5
-  m_Name: Script canva
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &236590687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 236590686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575ccdd3957ae1e4b8c5f6022e9ffc3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &236590688
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 236590686}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8307292, y: 0.8307292, z: 0.8307292}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 959.99994, y: 555.536}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &239060445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16935,6 +16903,11 @@ Transform:
   - {fileID: 160270391}
   m_Father: {fileID: 313298497}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &260106957 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8001800981929428112, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
+  m_PrefabInstance: {fileID: 187476000}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &260826667 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 62af4f93d54a4e2438e1766792e58ecd, type: 3}
@@ -17427,7 +17400,7 @@ GameObject:
   - component: {fileID: 276593041}
   - component: {fileID: 276593040}
   m_Layer: 5
-  m_Name: OptionsButton
+  m_Name: "BackToMen\xFAButton"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17497,16 +17470,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 236590687}
+      - m_Target: {fileID: 154637890}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: Loadscene
-        m_Mode: 5
+        m_MethodName: Volver
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Options
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &276593041
@@ -46200,7 +46173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5764706}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -46250,12 +46223,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808071726}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.079126336, y: 0.72079325, z: -0.08025227, w: 0.6839267}
-  m_LocalPosition: {x: -121.56457, y: 5.534921, z: -59.260952}
-  m_LocalScale: {x: 0.00020121259, y: 0.00065966055, z: 0.0072066295}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 260106957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &808071728
 MonoBehaviour:
@@ -53842,9 +53815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Opciones
-
-'
+  m_text: "Volver al men\xFA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -63127,7 +63098,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 236590687}
+      - m_Target: {fileID: 154637890}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
@@ -81839,9 +81810,7 @@ SceneRoots:
   - {fileID: 1505361876}
   - {fileID: 313298497}
   - {fileID: 1378583469}
-  - {fileID: 808071727}
   - {fileID: 1587589656}
-  - {fileID: 236590688}
   - {fileID: 154637888}
   - {fileID: 1861115301}
   - {fileID: 206806943}

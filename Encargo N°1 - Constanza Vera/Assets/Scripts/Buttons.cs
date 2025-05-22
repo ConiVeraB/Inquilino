@@ -4,10 +4,6 @@ public class Buttons : MonoBehaviour
 {
     public void Play()
     {
-        if (Musicmanager.instance != null)
-        {
-            Musicmanager.instance.StopMusic(); // Detiene la música antes de cargar la escena
-        }
         SceneManager.LoadScene("Game"); 
     }
 
