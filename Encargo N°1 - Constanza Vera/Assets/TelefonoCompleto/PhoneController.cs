@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using System.Collections;
 using TMPro;
 
@@ -34,7 +34,7 @@ public class PhoneController : MonoBehaviour
     //public PlayerController movimientoJugador;
     //public FirstPersonCamera camaraJugador;
 
-    [Header("C·mara FÌsica del TelÈfono")]
+    [Header("C√°mara F√≠sica del Tel√©fono")]
     public Camera cameraCelular;
 
     [Header("Tiempos")]
@@ -42,7 +42,7 @@ public class PhoneController : MonoBehaviour
     public float unlockAnimationDuration = 0.4f;
     public float phoneMoveDuration = 0.5f;
 
-    [Header("Reloj del TelÈfono")]
+    [Header("Reloj del Tel√©fono")]
     public TextMeshProUGUI textoHora;
     public int horaInicial = 18;
     public float segundosPorMinuto = 20f;
@@ -53,7 +53,7 @@ public class PhoneController : MonoBehaviour
 
 
 
-    [Header("AnimaciÛn de telÈfono al desbloquear")]
+    [Header("Animaci√≥n de tel√©fono al desbloquear")]
     public Vector3 phoneStartPosition = new Vector3(0, -0.5f, 2f);
     public Vector3 phoneEndPosition = new Vector3(0, 0f, 0.4f);
     public Vector3 phoneStartScale = new Vector3(0.1f, 0.1f,0.1f);
@@ -67,6 +67,9 @@ public class PhoneController : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip Touch;
+
+    public AudioSource Notificaci√≥n;
+    public AudioClip notificaci√≥nSensor;
 
     void Start()
     {
@@ -377,7 +380,7 @@ public class PhoneController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("panelChat1 no est· asignado en el Inspector.");
+            Debug.LogWarning("panelChat1 no est√° asignado en el Inspector.");
         }
 
         pantallaRecorte?.SetActive(true);
@@ -514,7 +517,7 @@ public class PhoneController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("panelChat2 no est· asignado en el Inspector.");
+            Debug.LogWarning("panelChat2 no est√° asignado en el Inspector.");
         }
 
         pantallaRecorte?.SetActive(true);
@@ -586,7 +589,7 @@ public class PhoneController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("panelChat3 no est· asignado en el Inspector.");
+            Debug.LogWarning("panelChat3 no est√° asignado en el Inspector.");
         }
 
         pantallaRecorte?.SetActive(true);
@@ -690,12 +693,16 @@ public class PhoneController : MonoBehaviour
     {
         if (!isPhoneActive || (panelBloqueo != null && panelBloqueo.activeSelf))
         {
-            Debug.Log("Mostrando notificaciÛn en pantalla de bloqueo: " + zona);
+            Debug.Log("Mostrando notificaci√≥n en pantalla de bloqueo: " + zona);
 
             if (panelNotificacionBloqueo != null)
             {
                 panelNotificacionBloqueo.SetActive(true);
-
+                // ‚Üê A√±adido: reproducir sonido si est√° asignado
+                if (Notificaci√≥n != null)
+                {
+                    Notificaci√≥n.Play();
+                }
                 if (notificacionCoroutine != null)
                     StopCoroutine(notificacionCoroutine);
 

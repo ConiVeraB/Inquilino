@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Pausa : MonoBehaviour
 {
     public GameObject pausePanel;
-    public MonoBehaviour cameraScript; // Asigna el script de cámara si quieres pausarla también
+    public MonoBehaviour cameraScript; 
     private bool isGamePaused = false;
 
     private void Start()
@@ -13,7 +13,7 @@ public class Pausa : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             TogglePause();
         }
