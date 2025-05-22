@@ -16,9 +16,6 @@ public class Photos : MonoBehaviour
 
     public PhoneSystem phoneSystem;
 
-    public AudioSource foto;
-    public AudioClip photoClip;
-
     private void Start()
     {
         if (photoDisplay != null)
@@ -40,10 +37,6 @@ public class Photos : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) && !isDisplayingPhoto )
         {
-            if (foto != null)
-            {
-                foto.Play();
-            }
             TakePhoto();
         }
     }
