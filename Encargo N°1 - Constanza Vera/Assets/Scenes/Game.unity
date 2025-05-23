@@ -31664,6 +31664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedBlanca (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 224741079065442129, guid: 5b28df8e610daff4398f5436d27cf061, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 600562590540787179, guid: 5b28df8e610daff4398f5436d27cf061, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.664902
