@@ -448,9 +448,10 @@ MonoBehaviour:
   m_text: "Director:  Constanza Vera\nProgramadores: Catalina P\xE9rez  - Constanza
     Vera\nArtista 2D: Catalina P\xE9rez\nArtista 3D: Fernanda Lillo\nAsistente 3D:
     Catalina P\xE9rez - Constanza Vera\nIntegraci\xF3n 3D: Catalina P\xE9rez - Constanza
-    Vera\nSonido: Basti\xE1n Flores\nAsistente: Pamela Sep\xFAlveda\n\nTexturas:
-    PolyHeaven - AmbientCG\nSkybox: AllSkyFree - Asset Store\nPost Processing: Constanza
-    Vera\n\n\n"
+    Vera\nSonido: Basti\xE1n Flores\nAsistente: Pamela Sep\xFAlveda\n\nNarrativa
+    y gui\xF3n: Catalina P\xE9rez\n\nVoice Acting (Proximamente) : Tuki Tuki dubs
+    \nTexturas: PolyHeaven - AmbientCG\nSkybox: AllSkyFree - Asset Store\nPost Processing:
+    Constanza Vera\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -515,7 +516,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -499.64246, y: -60.92389, z: -499.40015, w: -464.87115}
+  m_margin: {x: -499.64246, y: -60.92389, z: -499.40015, w: -533.9181}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
