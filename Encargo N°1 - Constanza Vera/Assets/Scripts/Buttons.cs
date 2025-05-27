@@ -4,22 +4,24 @@ using UnityEngine.UI;
 public class Buttons : MonoBehaviour
 {
     public GameObject creditsPanel;
+    public GameObject optionsPanel;
+
+    public Slider musicSlider;
+    public Slider SFXSlider;
+    public Slider VoicesSlider; //Slider para controlar el volumen de las voces grabadas, aparte de los sonidos del juego//
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-        if (creditsPanel != null)
+        if (creditsPanel != null && optionsPanel !=null)
         {
             creditsPanel.SetActive(false);
+            optionsPanel.SetActive(false);
         }
-        else
-        {
-            Debug.LogWarning("El Panel de Créditos no ha sido asignado en el Inspector para el script Buttons.");
-        }
+      
     }
 
-    
     public void Play()
     {
         SceneManager.LoadScene("Game"); 
@@ -41,9 +43,13 @@ public class Buttons : MonoBehaviour
         {
             creditsPanel.SetActive(true);
         }
-        else
+        
+    }
+    public void ShowOptions()
+    {
+        if (optionsPanel != null)
         {
-            Debug.LogError("Por ahi no era");
+            optionsPanel.SetActive(true);
         }
     }
 
@@ -53,11 +59,17 @@ public class Buttons : MonoBehaviour
         {
             creditsPanel.SetActive(false);
         }
-        else
+       
+    }
+
+    public void HideOptions()
+    {
+        if (creditsPanel != null)
         {
-            Debug.LogError("Nope");
+            creditsPanel.SetActive(false);
         }
     }
+
     public void Quit()
     {
         Application.Quit();
