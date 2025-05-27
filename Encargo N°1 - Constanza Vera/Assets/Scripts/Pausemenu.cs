@@ -4,10 +4,27 @@ using UnityEngine.SceneManagement;
 public class Pausemenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    private bool isPaused = false;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
     public void Pause()
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 0;
+        isPaused = true;
     }
 
     public void Home()
@@ -20,6 +37,7 @@ public class Pausemenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+        isPaused = false;
     }
 
     public void Restart()

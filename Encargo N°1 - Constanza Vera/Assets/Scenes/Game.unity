@@ -49347,9 +49347,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1046125025}
   - {fileID: 1562278174}
   - {fileID: 1908348486}
+  - {fileID: 1046125025}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -56703,8 +56703,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1117932985}
-  - component: {fileID: 1117932986}
-  - component: {fileID: 1117932987}
   - component: {fileID: 1117932988}
   m_Layer: 0
   m_Name: PivotDoorWhite (1)
@@ -56729,43 +56727,6 @@ Transform:
   - {fileID: 1510197746}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1117932986
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117932984}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e4a747c00d9f8b146ac47f86d0a05694, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1117932987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117932984}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 120ec53e9224fb648884966520a4e90e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 778698160}
-  sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
 --- !u!114 &1117932988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64086,7 +64047,6 @@ MonoBehaviour:
   suavidad: 3.39
   usingPhone: 1
   dialogueManager: {fileID: 1227406700}
-  objetiveManager: {fileID: 1861115303}
   "ba\xF1oruido": {fileID: 318109839}
   phoneSystem: {fileID: 1861115302}
   telefono: {fileID: 1016053279}
@@ -77612,6 +77572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveText: {fileID: 1118905094}
   objectives: []
+  currentObjectiveIndex: 0
 --- !u!114 &1861115304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88795,7 +88756,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2138454296}
   - component: {fileID: 2138454295}
-  - component: {fileID: 2138454294}
   - component: {fileID: 2138454293}
   m_Layer: 0
   m_Name: PivotDoorWhite (11)
@@ -88822,21 +88782,6 @@ MonoBehaviour:
   puerta: {fileID: 1743234827}
   abrirPuertas: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
   cerrarPuertas: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
---- !u!114 &2138454294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138454292}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 120ec53e9224fb648884966520a4e90e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 1743234827}
-  sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
 --- !u!95 &2138454295
 Animator:
   serializedVersion: 7

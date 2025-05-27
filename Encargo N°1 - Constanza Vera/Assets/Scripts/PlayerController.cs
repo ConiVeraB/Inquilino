@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     public bool usingPhone;
     public DialogueManager dialogueManager;
-    public ObjetiveManager objetiveManager;
+   
 
     public AudioSource bañoruido;
 
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject telefono;
 
-    //public Transform Player;
+   
 
     bool enEscalera = false;
     void Start()
@@ -41,9 +41,7 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, 0); // Rotación del personaje
         camara.transform.localRotation = Quaternion.Euler(0, 0, 0);
 
-        objetiveManager.AddObjective("Contesta la llamada y enciende la luz al entrar", "Luego ve a la cocina a prepararte un café");
-        objetiveManager.UpdateObjective();
-        //AgarrarTelefono();
+        
     }
 
 
@@ -112,10 +110,7 @@ public class PlayerController : MonoBehaviour
             };
             dialogueManager.StartDialogue(); // Inicia el diálogo
 
-            objetiveManager.CompleteObjective(); // Completa el objetivo de ir a la cocina
-         
-            objetiveManager.AddObjective("Busca el tarro de café", "No debió ir muy lejos, ¿verdad?");
-            objetiveManager.UpdateObjective();
+          
             }
 
 
@@ -136,9 +131,7 @@ public class PlayerController : MonoBehaviour
              };
             dialogueManager.StartDialogue(); // Inicia el diálogo
 
-            objetiveManager.CompleteObjective(); // Completa el objetivo de ir al baño
-            objetiveManager.AddObjective("Ir a la puerta principal", "Dirígete a la entrada de la casa.");
-            objetiveManager.UpdateObjective();
+            
 
             if (phoneSystem != null)
             {

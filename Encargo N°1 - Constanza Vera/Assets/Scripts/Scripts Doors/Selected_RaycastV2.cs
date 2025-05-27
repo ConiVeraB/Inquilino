@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Selected_RaycastV2 : MonoBehaviour
 {
-    public float distancia = 3f;
+    public float distancia = 3.3f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
