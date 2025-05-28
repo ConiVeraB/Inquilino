@@ -27,6 +27,7 @@ public class FirstPersonCamera : MonoBehaviour
 
     void Update()
     {
+        if (Pausemenu.GameIsPaused) return;
         if (phoneController.isPhoneActive) return;
 
         Vector2 mouseInput = new Vector2(
@@ -48,7 +49,8 @@ public class FirstPersonCamera : MonoBehaviour
 
         // Aplicar rotaciones
         cameraHolder.localRotation = Quaternion.Euler(-currentLookingPos.y, 0, 0); // vertical
-        transform.rotation = Quaternion.Euler(0, currentLookingPos.x, 0);         // horizontal
+        transform.rotation = Quaternion.Euler(0, currentLookingPos.x, 0); 
+        // horizontal
     }
 
 

@@ -24,7 +24,7 @@ public class Buttons : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Game"); 
+        SceneManager.LoadScene("Transicion"); 
     }
 
     public void Loadscene(string sceneName)
@@ -53,7 +53,8 @@ public class Buttons : MonoBehaviour
         }
     }
 
-    public void HideCredits()
+    
+     public void HideCredits()
     {
         if (creditsPanel != null)
         {
@@ -62,11 +63,12 @@ public class Buttons : MonoBehaviour
        
     }
 
+    
     public void HideOptions()
     {
-        if (creditsPanel != null)
+        if (optionsPanel != null)
         {
-            creditsPanel.SetActive(false);
+            optionsPanel.SetActive(false);
         }
     }
 

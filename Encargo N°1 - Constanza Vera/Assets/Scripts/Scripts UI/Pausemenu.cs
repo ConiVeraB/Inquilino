@@ -5,6 +5,7 @@ public class Pausemenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     private bool isPaused = false;
+    public static bool GameIsPaused { get; private set; }
 
     void Update()
     {
@@ -22,9 +23,12 @@ public class Pausemenu : MonoBehaviour
     }
     public void Pause()
     {
-        pauseMenu.SetActive(false);
+        pauseMenu.SetActive(true);
         Time.timeScale = 0;
         isPaused = true;
+        GameIsPaused = true;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 
     public void Home()
@@ -38,6 +42,9 @@ public class Pausemenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
+        GameIsPaused = false;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
     }
 
     public void Restart()

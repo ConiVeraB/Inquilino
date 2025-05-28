@@ -47,7 +47,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(usingPhone)
+        if (Pausemenu.GameIsPaused) return;
+
+        if (usingPhone)
         {
         HorizontalInput = Input.GetAxis("Horizontal") * speed;
         VerticalInput = Input.GetAxis("Vertical") * speed;
@@ -79,7 +81,7 @@ public class PlayerController : MonoBehaviour
 
     void MovimientoCamara()
     {
-
+        if (Pausemenu.GameIsPaused) return;
 
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
