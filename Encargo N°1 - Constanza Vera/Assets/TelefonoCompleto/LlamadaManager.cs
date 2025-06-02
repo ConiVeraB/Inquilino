@@ -10,11 +10,11 @@ public class DatosLlamada
 {
     public string nombre;
     public Sprite imagenContacto;
-    public float tiempoInicio; // En segundos desde el inicio del juego
-    public GameObject panelLlamada; // Panel de llamada entrante
-    public GameObject panelEnLlamada; // Panel durante la llamada
-    public float duracionMaxima = 10f; // Duración de la llamada en segundos
-    public AudioClip audioConversacion; // Audio único de esta llamada
+    public float tiempoInicio; 
+    public GameObject panelLlamada; 
+    public GameObject panelEnLlamada; 
+    public float duracionMaxima = 10f; 
+    public AudioClip audioConversacion; 
 }
 
 public class LlamadaManager : MonoBehaviour
@@ -30,11 +30,11 @@ public class LlamadaManager : MonoBehaviour
     public Button botonCortarEnLlamada;
 
     [Header("Sonido")]
-    public AudioSource audioLlamada;      // Audio del tono de llamada entrante
+    public AudioSource audioLlamada;      
     public AudioClip clipLlamada;
 
     [Header("Audio conversación")]
-    public AudioSource audioConversacion; // Audio para reproducir durante la llamada
+    public AudioSource audioConversacion; 
 
     [Header("Cortar/Contestar")]
     public AudioSource audioSource;
@@ -45,12 +45,24 @@ public class LlamadaManager : MonoBehaviour
     public float intensidadVibracion = 10f;
     public float frecuenciaVibracion = 25f;
 
+    [Header("Notificación de llamada")]
+    public NotificacionLlamadaUI notificacionLlamadaUI;
+
+    [Header("Notificación post-llamada")]
+    public NotificacionPostLlamadaUI notificacionPostLlamadaUI;
+
+    [SerializeField] private AudioClip audioNegacion;
+    [SerializeField] private AudioSource audioUI;
+
+
+
     private float tiempoJuego;
     private int indiceActual = 0;
     private bool llamadaEnCurso = false;
     private Coroutine llamadaActiva;
     private bool vibrando = false;
     private Vector3 posicionOriginal;
+    private bool audioNegacionReproduciendose = false;
 
     void Update()
     {
@@ -98,11 +110,54 @@ public class LlamadaManager : MonoBehaviour
         botonContestar.onClick.AddListener(() => ContestarLlamada(llamada));
 
         botonCortar.onClick.RemoveAllListeners();
-        botonCortar.onClick.AddListener(() => CortarLlamada(llamada));
+        botonCortar.interactable = true;
+        botonCortar.gameObject.SetActive(true);
 
-        botonCortarEnLlamada.onClick.RemoveAllListeners();
-        botonCortarEnLlamada.onClick.AddListener(() => CortarLlamada(llamada));
+        if (indiceActual == 0)
+        {
+            
+            botonCortar.onClick.AddListener(ReproducirAudioNegacion);
+        }
+        else
+        {
+          
+            botonCortar.onClick.AddListener(() => CortarLlamada(llamada));
+        }
+
+
+        //botonCortarEnLlamada.onClick.RemoveAllListeners();
+        //botonCortarEnLlamada.onClick.AddListener(() => CortarLlamada(llamada));
+
+        if (notificacionLlamadaUI != null)
+            Invoke(nameof(MostrarNotificacionConRetraso), 2f);
     }
+
+
+    void ReproducirAudioNegacion()
+    {
+        if (audioUI == null || audioNegacion == null || audioNegacionReproduciendose)
+            return;
+
+        audioUI.PlayOneShot(audioNegacion);
+        audioNegacionReproduciendose = true;
+
+        StartCoroutine(ResetearBloqueoAudio(audioNegacion.length));
+    }
+
+    IEnumerator ResetearBloqueoAudio(float duracion)
+    {
+        yield return new WaitForSeconds(duracion);
+        audioNegacionReproduciendose = false;
+    }
+
+
+    void MostrarNotificacionConRetraso()
+    {
+        if (notificacionLlamadaUI != null)
+            notificacionLlamadaUI.MostrarNotificacion();
+    }
+
+
 
     void ContestarLlamada(DatosLlamada llamada)
     {
@@ -121,13 +176,13 @@ public class LlamadaManager : MonoBehaviour
         if (textoDuracionLlamada != null)
             textoDuracionLlamada.text = "00:00";
 
-        // Oculta botón de cortar
+ 
         botonCortarEnLlamada.interactable = false;
         botonCortarEnLlamada.gameObject.SetActive(false);
 
         llamadaActiva = StartCoroutine(ContarDuracionLlamada(llamada));
 
-        // Inicia el audio único de la llamada
+      
         if (audioConversacion != null && llamada.audioConversacion != null)
         {
             audioConversacion.clip = llamada.audioConversacion;
@@ -161,7 +216,7 @@ public class LlamadaManager : MonoBehaviour
     {
         yield return new WaitForSeconds(duracion);
 
-        // Finaliza automáticamente la llamada
+
         FinalizarLlamada(llamada);
     }
 
@@ -186,9 +241,21 @@ public class LlamadaManager : MonoBehaviour
 
         indiceActual++;
         llamadaEnCurso = false;
+
+        if (notificacionPostLlamadaUI != null)
+            StartCoroutine(MostrarPostLlamadaConRetraso());
+
+
     }
     public void PlayButtonSound()
     {
         audioSource.PlayOneShot(audioSource.clip);
     }
+
+    private IEnumerator MostrarPostLlamadaConRetraso()
+    {
+        yield return new WaitForSeconds(2f);
+        notificacionPostLlamadaUI.MostrarNotificacion();
+    } 
+
 }
