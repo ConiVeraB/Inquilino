@@ -10726,8 +10726,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  m_Resource: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -16894,8 +16894,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  m_Resource: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -23195,23 +23195,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 62af4f93d54a4e2438e1766792e58ecd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3525879
+      value: 1.352588
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62af4f93d54a4e2438e1766792e58ecd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.0586501
+      value: 1.0586504
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62af4f93d54a4e2438e1766792e58ecd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4740295
+      value: 0.17797852
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62af4f93d54a4e2438e1766792e58ecd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3025
+      value: -1.3024998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62af4f93d54a4e2438e1766792e58ecd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.4470005
+      value: -1.2480011
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62af4f93d54a4e2438e1766792e58ecd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -39769,8 +39769,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
-  m_Resource: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -45846,8 +45846,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  m_Resource: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -47084,8 +47084,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
-  m_Resource: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -48110,8 +48110,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  m_Resource: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -55675,8 +55675,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
-  m_Resource: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -57677,8 +57677,8 @@ MonoBehaviour:
   closeAngle: 0
   curveAnimation: 10
   puerta: {fileID: 778698160}
-  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+  abrirPuerta: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: e22abbaa4c7b2784c9ddd068b18f78ca, type: 3}
 --- !u!1001 &1118466971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58541,8 +58541,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
-  m_Resource: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -58992,8 +58992,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  m_Resource: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -60315,8 +60315,8 @@ MonoBehaviour:
   closeAngle: 0
   curveAnimation: 10
   puerta: {fileID: 1152657091}
-  abrirPuertas: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  cerrarPuertas: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+  abrirPuertas: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  cerrarPuertas: {fileID: 8300000, guid: e22abbaa4c7b2784c9ddd068b18f78ca, type: 3}
 --- !u!1 &1239675330
 GameObject:
   m_ObjectHideFlags: 0
@@ -60352,8 +60352,8 @@ MonoBehaviour:
   closeAngle: 0
   curveAnimation: 10
   puerta: {fileID: 1743234827}
-  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+  abrirPuerta: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: e22abbaa4c7b2784c9ddd068b18f78ca, type: 3}
 --- !u!114 &1239675332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62135,8 +62135,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
-  m_Resource: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -64075,8 +64075,8 @@ MonoBehaviour:
   closeAngle: 0
   curveAnimation: 10
   puerta: {fileID: 231805452}
-  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+  abrirPuerta: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: e22abbaa4c7b2784c9ddd068b18f78ca, type: 3}
 --- !u!1 &1343239041
 GameObject:
   m_ObjectHideFlags: 0
@@ -64508,8 +64508,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  m_Resource: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -68387,8 +68387,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
-  m_Resource: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -68658,8 +68658,8 @@ MonoBehaviour:
   closeAngle: 0
   curveAnimation: 10
   puerta: {fileID: 1743234827}
-  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+  abrirPuerta: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: e22abbaa4c7b2784c9ddd068b18f78ca, type: 3}
 --- !u!114 &1496346928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68706,7 +68706,7 @@ Transform:
   m_GameObject: {fileID: 1496346926}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -150.35399, y: 15.7359, z: -9.56}
+  m_LocalPosition: {x: -154.006, y: 15.7359, z: -9.759}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -68989,8 +68989,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
-  m_Resource: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -70176,8 +70176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 188631951}
-  sonidoAbrir: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  sonidoCerrar: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+  sonidoAbrir: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  sonidoCerrar: {fileID: 8300000, guid: e22abbaa4c7b2784c9ddd068b18f78ca, type: 3}
 --- !u!95 &1557731437
 Animator:
   serializedVersion: 7
@@ -70216,8 +70216,8 @@ MonoBehaviour:
   closeAngle: 0
   curveAnimation: 10
   puerta: {fileID: 188631951}
-  abrirPuertas: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  cerrarPuertas: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+  abrirPuertas: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  cerrarPuertas: {fileID: 8300000, guid: e22abbaa4c7b2784c9ddd068b18f78ca, type: 3}
 --- !u!1001 &1558928363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70772,8 +70772,8 @@ MonoBehaviour:
   closeAngle: 0
   curveAnimation: 10
   puerta: {fileID: 1217486431}
-  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+  abrirPuerta: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: e22abbaa4c7b2784c9ddd068b18f78ca, type: 3}
 --- !u!1 &1566564353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3297911168046892570, guid: aa6e5a71d562a0243bc5254b8d740960, type: 3}
@@ -75233,8 +75233,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  m_Resource: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -76488,8 +76488,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
-  m_Resource: {fileID: 8300000, guid: 2794d0f24d750874ba7727e3c9048294, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5a394a0f121bfd34f9ef8a5ea76a43ab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.569
   m_Pitch: 1
@@ -80331,8 +80331,8 @@ MonoBehaviour:
   closeAngle: 0
   curveAnimation: 10
   puerta: {fileID: 701737456}
-  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+  abrirPuerta: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: e22abbaa4c7b2784c9ddd068b18f78ca, type: 3}
 --- !u!1 &1915587728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6056905489602623558, guid: 6228adfa1e232ea4ba1afd1532e878e3, type: 3}
@@ -88537,8 +88537,8 @@ MonoBehaviour:
   closeAngle: 0
   curveAnimation: 10
   puerta: {fileID: 1359890911}
-  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+  abrirPuerta: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: e22abbaa4c7b2784c9ddd068b18f78ca, type: 3}
 --- !u!1 &2078290938
 GameObject:
   m_ObjectHideFlags: 0
@@ -89045,8 +89045,8 @@ MonoBehaviour:
   closeAngle: 0
   curveAnimation: 10
   puerta: {fileID: 1743234827}
-  abrirPuerta: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  cerrarPuerta: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+  abrirPuerta: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  cerrarPuerta: {fileID: 8300000, guid: e22abbaa4c7b2784c9ddd068b18f78ca, type: 3}
 --- !u!1 &2105236039
 GameObject:
   m_ObjectHideFlags: 0
@@ -89977,8 +89977,8 @@ MonoBehaviour:
   closeAngle: 0
   curveAnimation: 10
   puerta: {fileID: 1743234827}
-  abrirPuertas: {fileID: 8300000, guid: 6d112101d51987a49907c58d7a22d392, type: 3}
-  cerrarPuertas: {fileID: 8300000, guid: b239e4a134c15fe42a8be4a5053cf763, type: 3}
+  abrirPuertas: {fileID: 8300000, guid: 877019b94a6cca1479ee7c1036f2ffa7, type: 3}
+  cerrarPuertas: {fileID: 8300000, guid: e22abbaa4c7b2784c9ddd068b18f78ca, type: 3}
 --- !u!95 &2138454295
 Animator:
   serializedVersion: 7

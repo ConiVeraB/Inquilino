@@ -17,6 +17,9 @@ public class Footstepcontroller : MonoBehaviour
     private Vector3 lastPosition;
     private float accumulatedDistance = 0f;
 
+    private float lastPitch = 0f;
+    private const float pitchDifferenceThreshold = 0.09f; // Ajusta este valor según cuánta diferencia quieras
+
     void Start()
     {
         lastPosition = transform.position;
@@ -50,6 +53,17 @@ public class Footstepcontroller : MonoBehaviour
     void PlayFootstep()
     {
         if (footstepClip == null || footSource == null) return;
+
+        float newPitch;
+        int attempts = 0;
+        do
+        {
+            newPitch = Random.Range(minPitch, maxPitch);
+            attempts++;
+        } while (Mathf.Abs(newPitch - lastPitch) < pitchDifferenceThreshold && attempts < 10);
+
+        lastPitch = newPitch;
+
 
         footSource.pitch = Random.Range(minPitch, maxPitch);
         footSource.volume = Random.Range(minVolume, maxVolume);
