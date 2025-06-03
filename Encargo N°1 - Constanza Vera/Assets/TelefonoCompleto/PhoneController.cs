@@ -203,6 +203,8 @@ public class PhoneController : MonoBehaviour
 
         yield return StartCoroutine(FadeCanvas(0f));
 
+        phoneAnimator.SetTrigger("CerrarTelefono");
+
         phoneAnimator.Play("PhoneDisappear", -1, 0f);
         float animLength = phoneAnimator.GetCurrentAnimatorStateInfo(0).length;
         yield return new WaitForSeconds(animLength);
