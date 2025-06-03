@@ -13,8 +13,9 @@ public class DatosLlamada
     public float tiempoInicio; 
     public GameObject panelLlamada; 
     public GameObject panelEnLlamada; 
-    public float duracionMaxima = 10f; 
-    public AudioClip audioConversacion; 
+    public float duracionMaxima = 10f;
+    public AudioObject audioAndSubtitles;
+    //public AudioClip audioConversacion; 
 }
 
 public class LlamadaManager : MonoBehaviour
@@ -163,6 +164,7 @@ public class LlamadaManager : MonoBehaviour
     {
         llamada.panelLlamada?.SetActive(false);
         llamada.panelEnLlamada?.SetActive(true);
+        Vocals.instance.Say(llamada.audioAndSubtitles);
 
         if (audioLlamada != null && audioLlamada.isPlaying)
             audioLlamada.Stop();
@@ -183,11 +185,11 @@ public class LlamadaManager : MonoBehaviour
         llamadaActiva = StartCoroutine(ContarDuracionLlamada(llamada));
 
       
-        if (audioConversacion != null && llamada.audioConversacion != null)
+        if (audioConversacion != null && llamada.audioAndSubtitles.clip != null)
         {
-            audioConversacion.clip = llamada.audioConversacion;
+            audioConversacion.clip = llamada.audioAndSubtitles.clip;
             audioConversacion.Play();
-            StartCoroutine(EsperarFinConversacion(llamada.audioConversacion.length, llamada));
+            StartCoroutine(EsperarFinConversacion(llamada.audioAndSubtitles.clip.length, llamada));
         }
         PlayButtonSound();
     }
