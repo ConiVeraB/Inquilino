@@ -55,6 +55,19 @@ public class LlamadaManager : MonoBehaviour
     [SerializeField] private AudioClip audioNegacion;
     [SerializeField] private AudioSource audioUI;
 
+    [System.Serializable]
+    public class LineaSubtitulo
+    {
+        public string texto;
+        public float delayAntes;   
+        public float duracion;     
+    }
+
+    [Header("Subtítulos para esta llamada")]
+    public List<LineaSubtitulo> subtitulos;
+
+
+
 
 
     private float tiempoJuego;
@@ -192,7 +205,19 @@ public class LlamadaManager : MonoBehaviour
             StartCoroutine(EsperarFinConversacion(llamada.audioAndSubtitles.clip.length, llamada));
         }
         PlayButtonSound();
+        StartCoroutine(MostrarSubtitulos());
+
     }
+
+    IEnumerator MostrarSubtitulos()
+    {
+        foreach (var linea in subtitulos)
+        {
+            yield return new WaitForSeconds(linea.delayAntes);
+            SubtitleManager.Instance.ShowSubtitle(linea.texto, linea.duracion);
+        }
+    }
+
 
     IEnumerator ContarDuracionLlamada(DatosLlamada llamada)
     {
