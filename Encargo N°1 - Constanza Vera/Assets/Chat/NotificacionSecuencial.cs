@@ -12,7 +12,7 @@ public class NotificacionSecuencial : MonoBehaviour
     public float velocidad = 0.5f;
 
     [Header("Secuencia")]
-    public GameObject triggerPrevio; // GameObject con otra NotificacionSecuencial
+    public GameObject triggerPrevio; 
 
     private Vector2 posicionVisible = new Vector2(770.72f, 217.71f);
     private Vector2 posicionOculta = new Vector2(1140f, 217.71f);
