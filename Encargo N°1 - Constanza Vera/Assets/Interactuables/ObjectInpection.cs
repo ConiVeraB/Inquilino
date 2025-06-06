@@ -15,11 +15,11 @@ public class ObjectInspection : MonoBehaviour
     public FirstPersonCamera cameraLookScript;
 
     [Header("Lectura durante inspección")]
-    public GameObject readPrompt;  // Texto "Presiona R para Leer"
-    public GameObject readImage;   // Imagen con contenido de lectura
-    
+    public GameObject readPrompt;
+    public GameObject readImage;
+
     [Header("Layer de enfoque sin post-procesado")]
-    public string focusLayerName = "FocusedObject"; // debe existir en el proyecto
+    public string focusLayerName = "FocusedObject";
 
     private int originalLayer;
     public Volume postProcessVolume;
@@ -34,6 +34,11 @@ public class ObjectInspection : MonoBehaviour
 
     private Vector3 originalPosition;
     private Quaternion originalRotation;
+
+    [Header("Sonido de primera inspección")]
+    public AudioSource audioSource;
+    public AudioClip oneTimeSound;
+    private bool hasPlayedSound = false;
 
     void Start()
     {
@@ -55,7 +60,6 @@ public class ObjectInspection : MonoBehaviour
         if (isInRange && !isInspecting && Input.GetKeyDown(KeyCode.E))
         {
             StartInspection();
-            
         }
         else if (isInspecting && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Escape)))
         {
@@ -64,7 +68,6 @@ public class ObjectInspection : MonoBehaviour
 
         if (isInspecting)
         {
-            // Mover objeto hacia el punto de inspección
             if (!positionSnapped)
             {
                 float distance = Vector3.Distance(transform.position, inspectAnchor.position);
@@ -81,7 +84,6 @@ public class ObjectInspection : MonoBehaviour
 
             RotateObject();
 
-            // Mostrar texto de lectura
             if (Input.GetKeyDown(KeyCode.R) && readImage != null)
             {
                 isReading = !isReading;
@@ -101,7 +103,7 @@ public class ObjectInspection : MonoBehaviour
 
         originalLayer = gameObject.layer;
         gameObject.layer = LayerMask.NameToLayer(focusLayerName);
-        cameraLookScript.LookObjectCamera.SetActive(true);  
+        cameraLookScript.LookObjectCamera.SetActive(true);
 
         if (interactionImage != null)
             interactionImage.SetActive(false);
@@ -122,8 +124,13 @@ public class ObjectInspection : MonoBehaviour
         Cursor.visible = false;
 
         if (postProcessVolume != null)
+            postProcessVolume.enabled = true;
+
+        
+        if (!hasPlayedSound && audioSource != null && oneTimeSound != null)
         {
-            postProcessVolume.enabled = true;  // Activa el efecto al comenzar inspección
+            audioSource.PlayOneShot(oneTimeSound);
+            hasPlayedSound = true;
         }
     }
 
@@ -156,9 +163,7 @@ public class ObjectInspection : MonoBehaviour
             interactionImage.SetActive(true);
 
         if (postProcessVolume != null)
-        {
-            postProcessVolume.enabled = false;  // Desactiva el efecto al terminar inspección
-        }
+            postProcessVolume.enabled = false;
     }
 
     void RotateObject()
@@ -190,4 +195,5 @@ public class ObjectInspection : MonoBehaviour
         }
     }
 }
+
 
