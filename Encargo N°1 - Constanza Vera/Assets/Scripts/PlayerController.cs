@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
         camara = Camera.main;
 
         rotaciónY = 0;
-        rotaciónYActual = 0; // Inicializar la rotación suavizada
+        rotaciónYActual = 0;
 
         transform.rotation = Quaternion.Euler(0, 0, 0); // Rotación del personaje
         camara.transform.localRotation = Quaternion.Euler(0, 0, 0);
@@ -151,11 +151,6 @@ void OnTriggerExit(Collider other)
         rb.useGravity = true; // Vuelve a caer normalmente
     }
 }
-    //void AgarrarTelefono()
-    //{
-    //    telefono.transform.SetParent(Player.transform);
-    //    telefono.transform.localPosition = new Vector3(0, 1.5f, 1);
-    //    telefono.transform.localRotation = Quaternion.identity;
-    //}
+    
 
 }
