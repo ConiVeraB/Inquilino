@@ -8,9 +8,9 @@ public class NotificacionInicioUI : MonoBehaviour
     public float duracionVisible = 4f;
     public float velocidad = 0.5f;
 
-    private Vector2 posicionVisible = new Vector2(770.72f, 217.71f);
-    private Vector2 posicionOculta = new Vector2(1140f, 217.71f);
-
+    public Vector2 posicionVisible = new Vector2(770.72f, 217.71f);
+    public  Vector2 posicionOculta = new Vector2(1140f, 217.71f);
+    public bool isFirstNotification;
     private void Start()
     {
         if (panelNotificacion == null)
@@ -22,7 +22,10 @@ public class NotificacionInicioUI : MonoBehaviour
        
         panelNotificacion.anchoredPosition = posicionOculta;
 
+       if(isFirstNotification)
+        {
         StartCoroutine(MostrarNotificacionConRetraso());
+        }
     }
 
     private IEnumerator MostrarNotificacionConRetraso()

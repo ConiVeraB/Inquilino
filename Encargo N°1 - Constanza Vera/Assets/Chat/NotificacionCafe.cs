@@ -11,8 +11,8 @@ public class NotificacionCafe : MonoBehaviour
     public float duracionVisible = 4f;
     public float velocidad = 0.5f;
 
-    private Vector2 posicionVisible = new Vector2(766f, 342f);
-    private Vector2 posicionOculta = new Vector2(1141f, 342f);
+    [SerializeField] Vector2 posicionVisible = new Vector2(766f, 342f);
+    [SerializeField] Vector2 posicionOculta = new Vector2(1141f, 342f);
 
     private bool yaMostrada = false;
 
