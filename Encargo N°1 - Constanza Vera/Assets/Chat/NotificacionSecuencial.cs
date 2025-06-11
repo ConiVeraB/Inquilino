@@ -14,8 +14,8 @@ public class NotificacionSecuencial : MonoBehaviour
     [Header("Secuencia")]
     public GameObject triggerPrevio; 
 
-    [SerializeField] Vector2 posicionVisible = new Vector2(770.72f, 217.71f);
-    [SerializeField] Vector2 posicionOculta = new Vector2(1140f, 217.71f);
+    private Vector2 posicionVisible = new Vector2(770.72f, 217.71f);
+    private Vector2 posicionOculta = new Vector2(1140f, 217.71f);
 
     [HideInInspector] public bool yaMostrada = false;
 
