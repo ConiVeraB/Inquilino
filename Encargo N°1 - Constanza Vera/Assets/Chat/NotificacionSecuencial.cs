@@ -12,7 +12,15 @@ public class NotificacionSecuencial : MonoBehaviour
     public float velocidad = 0.5f;
 
     [Header("Secuencia")]
-    public GameObject triggerPrevio; 
+    public GameObject triggerPrevio;
+
+    [Header("Chat siguiente (opcional)")]
+    public ChatSecuencialDecisiones siguienteChat;
+
+    [Header("Luces a parpadear (opcional)")]
+    public LuzParpadeante[] lucesAParpadear;
+
+
 
     private Vector2 posicionVisible = new Vector2(770.72f, 217.71f);
     private Vector2 posicionOculta = new Vector2(1140f, 217.71f);
@@ -80,6 +88,23 @@ public class NotificacionSecuencial : MonoBehaviour
             DOVirtual.DelayedCall(duracionVisible, () =>
             {
                 panelNotificacion.DOAnchorPos(posicionOculta, velocidad).SetEase(Ease.InCubic);
+
+           
+                foreach (var luz in lucesAParpadear)
+                {
+                    if (luz != null)
+                    {
+                        luz.IniciarParpadeo();
+                        Debug.Log($"[{name}] Luz parpadeante activada: {luz.name}");
+                    }
+                }
+
+
+                if (siguienteChat != null)
+                {
+                    Debug.Log($"[{name}] Activando chat directamente tras notificación.");
+                    siguienteChat.IniciarDesdeEvento();
+                }
             });
         });
 
@@ -89,4 +114,5 @@ public class NotificacionSecuencial : MonoBehaviour
             sonidoNotificacion.Play();
         }
     }
+
 }
