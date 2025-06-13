@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using NUnit.Framework;
+using System.Collections.Generic;
 public class Photos : MonoBehaviour
 {
 
@@ -9,11 +11,9 @@ public class Photos : MonoBehaviour
     public int photoWidth = 512; // Ancho de la foto. 
     public int photoHeight = 512; // Alto de la foto
     public string albumName = "PhonePhotos";
-    public GameObject gallery;
-    public GameObject galleryImage;
     private Texture2D photoTexture;
     private bool isDisplayingPhoto = false;
-
+    public List<RawImage> galeria = new List<RawImage>();
     public PhoneController phoneController;
 
     private void Start()
@@ -53,8 +53,15 @@ public class Photos : MonoBehaviour
     {
         
         photoTexture = new Texture2D(photoWidth, photoHeight, TextureFormat.RGB24, false);
+        for (int i = 0; i < galeria.Count; i++)
+        {
+            if (galeria[i].texture == null)
+            {
+                galeria[i].texture = photoTexture;
+                break;
+            }
+        }
 
-       
         Rect regionToRead = new Rect(0, 0, photoWidth, photoHeight);
         RenderTexture renderTexture = new RenderTexture(photoWidth, photoHeight, 24); // 24 bits de profundidad.
         Camera.main.targetTexture = renderTexture; 
@@ -82,8 +89,8 @@ public class Photos : MonoBehaviour
 
        
         photoDisplay.gameObject.SetActive(false);
-        Destroy(photoTexture);
-        photoTexture = null; 
+       // Destroy(photoTexture);
+       //   photoTexture = null; 
         isDisplayingPhoto = false; 
 
     }
