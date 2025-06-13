@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using System.Collections.Generic;
 
 
 public class PhoneController : MonoBehaviour
@@ -67,6 +68,9 @@ public class PhoneController : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip Touch;
+
+    [Header("## PHOTOS ##")]
+    public List<Texture2D> photos = new();
 
     void Start()
     {
@@ -159,6 +163,14 @@ public class PhoneController : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
+    }
+
+    public void SavePhoto(Texture2D photo)
+    {
+        Texture2D newText = new Texture2D(photo.width, photo.height, TextureFormat.RGB24, false);
+        newText.SetPixels(photo.GetPixels());
+        newText.Apply();
+        photos.Add(newText);
     }
 
 

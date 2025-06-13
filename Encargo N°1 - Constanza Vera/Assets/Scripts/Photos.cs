@@ -14,7 +14,7 @@ public class Photos : MonoBehaviour
     private Texture2D photoTexture;
     private bool isDisplayingPhoto = false;
 
-    public PhoneSystem phoneSystem;
+    public PhoneController phoneController;
 
     private void Start()
     {
@@ -27,7 +27,7 @@ public class Photos : MonoBehaviour
             Debug.LogError("No se ha asignado la RawImage en el Inspector.");
         }
 
-        if (phoneSystem == null)
+        if (phoneController == null)
         {
             Debug.LogError("No se ha asignado el PhoneSystem en el Inspector del script Photos.");
         }
@@ -51,42 +51,40 @@ public class Photos : MonoBehaviour
 
     IEnumerator CaptureAndDisplay()
     {
-        // 1. Crea una nueva textura para la foto.
+        
         photoTexture = new Texture2D(photoWidth, photoHeight, TextureFormat.RGB24, false);
 
-        // 2. Renderiza la escena a la textura.
+       
         Rect regionToRead = new Rect(0, 0, photoWidth, photoHeight);
         RenderTexture renderTexture = new RenderTexture(photoWidth, photoHeight, 24); // 24 bits de profundidad.
-        Camera.main.targetTexture = renderTexture; // Asigna la RenderTexture a la cámara.
+        Camera.main.targetTexture = renderTexture; 
 
 
-        //Renderiza la escena en la RenderTexture
         Camera.main.Render();
 
-        //Activa la RenderTexture para lectura
         RenderTexture.active = renderTexture;
 
         photoTexture.ReadPixels(regionToRead, 0, 0);
         photoTexture.Apply();
 
-        //Limpia y restaura
+       
         Camera.main.targetTexture = null;
         RenderTexture.active = null;
         Destroy(renderTexture);
 
-        // 3. Muestra la foto en la RawImage.
+       
         photoDisplay.texture = photoTexture;
         photoDisplay.gameObject.SetActive(true);
-        phoneSystem.SavePhoto(photoTexture);
+        phoneController.SavePhoto(photoTexture);
 
-        // 4. Espera un tiempo.
+        
         yield return new WaitForSeconds(displayDuration);
 
-        // 5. Oculta la foto y destruye la textura.
+       
         photoDisplay.gameObject.SetActive(false);
         Destroy(photoTexture);
-        photoTexture = null; // Importante para evitar errores si se toma otra foto rápidamente.
-        isDisplayingPhoto = false; // Permite tomar otra foto
+        photoTexture = null; 
+        isDisplayingPhoto = false; 
 
     }
 }
