@@ -13,8 +13,16 @@ public class Photos : MonoBehaviour
     public string albumName = "PhonePhotos";
     private Texture2D photoTexture;
     private bool isDisplayingPhoto = false;
+   // public List<PhotoData> capturedPhotos = new List<PhotoData>();
     public List<RawImage> galeria = new List<RawImage>();
     public PhoneController phoneController;
+
+    [Header("Configuración de Detección")]
+    public float raycastDistance = 20f; // Distancia máxima para el raycast
+    public LayerMask detectableLayers; // Qué capas de objetos pueden ser detectadas (ej. "Enemigo", "Pista")
+
+
+
 
     private void Start()
     {
@@ -26,6 +34,12 @@ public class Photos : MonoBehaviour
         {
             Debug.LogError("No se ha asignado la RawImage en el Inspector.");
         }
+
+        foreach (RawImage image in galeria)
+        {
+            image.gameObject.SetActive(false);
+        }
+
 
         if (phoneController == null)
         {
@@ -58,6 +72,7 @@ public class Photos : MonoBehaviour
             if (galeria[i].texture == null)
             {
                 galeria[i].texture = photoTexture;
+                galeria[i].gameObject.SetActive(true);
                 break;
             }
         }

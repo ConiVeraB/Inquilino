@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Escalera
   - Inspectable
+  - Pista
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - Display
   - FocusedObject
-  - 
+  - PistasClaves
   - 
   - Camera
   - 

@@ -52,8 +52,6 @@ public class PhoneController : MonoBehaviour
     private int minutos;
     private float tiempoAcumulado;
 
-
-
     [Header("Animación de teléfono al desbloquear")]
     public Vector3 phoneStartPosition = new Vector3(0, -0.5f, 2f);
     public Vector3 phoneEndPosition = new Vector3(0, 0f, 0.4f);
@@ -71,6 +69,10 @@ public class PhoneController : MonoBehaviour
 
     [Header("## PHOTOS ##")]
     public List<Texture2D> photos = new();
+
+    [Header("Fin del Juego")]
+    public GameObject gameOverCanvas;
+    private bool juegoTerminado = false;
 
     void Start()
     {
@@ -271,14 +273,46 @@ public class PhoneController : MonoBehaviour
                 minutos = 0;
                 horas++;
                 if (horas >= 24)
+                {
                     horas = 0;
+                    FinDelJuego();
+                    return;
+                }
+                    
             }
 
             ActualizarTextoHora();
         }
     }
 
+    public void FinDelJuego()
+    {
+        juegoTerminado = true;
+        if (isPhoneActive)
+        {
+            TogglePhone();
+        }
 
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        if (playerController != null)
+        {
+            playerController.enabled = false;
+        }
+
+        if (gameOverCanvas != null)
+        {
+            gameOverCanvas.SetActive(true);
+            Debug.Log("¡El Canvas de Fin de Juego se ha activado a las 00:00!");
+        }
+        else
+        {
+            Debug.LogWarning("El Canvas de fin de juego (gameOverCanvas) no está asignado en el Inspector de PhoneController.");
+        }
+
+        Time.timeScale = 0f;
+    }
     void ActualizarTextoHora()
     {
         if (textoHora != null)
