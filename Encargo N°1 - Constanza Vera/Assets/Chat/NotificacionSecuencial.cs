@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using System.Collections.Generic;
 
 public class NotificacionSecuencial : MonoBehaviour
 {
@@ -20,7 +21,14 @@ public class NotificacionSecuencial : MonoBehaviour
     [Header("Luces a parpadear (opcional)")]
     public LuzParpadeante[] lucesAParpadear;
 
+    [Header("Enemigo (opcional)")]
+    public EnemyPatrol enemigo;
+    public bool iniciarPatrulla = false;
+    public bool detenerPatrulla = false;
 
+    [Header("Ruta nueva (Vector3) (opcional)")]
+    public Vector3[] nuevaRutaVector;
+    public bool sobrescribirRuta = false;
 
     private Vector2 posicionVisible = new Vector2(770.72f, 217.71f);
     private Vector2 posicionOculta = new Vector2(1140f, 217.71f);
@@ -36,6 +44,12 @@ public class NotificacionSecuencial : MonoBehaviour
         }
 
         panelNotificacion.anchoredPosition = posicionOculta;
+
+        if (enemigo != null && detenerPatrulla)
+        {
+            enemigo.DetenerPatrulla();
+            Debug.Log($"[{name}] Patrulla detenida al inicio");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -89,7 +103,7 @@ public class NotificacionSecuencial : MonoBehaviour
             {
                 panelNotificacion.DOAnchorPos(posicionOculta, velocidad).SetEase(Ease.InCubic);
 
-           
+             
                 foreach (var luz in lucesAParpadear)
                 {
                     if (luz != null)
@@ -99,7 +113,44 @@ public class NotificacionSecuencial : MonoBehaviour
                     }
                 }
 
+          
+                if (enemigo != null)
+                {
+                    if (sobrescribirRuta && nuevaRutaVector != null && nuevaRutaVector.Length > 0)
+                    {
+                        
+                        enemigo.DetenerPatrulla();
 
+                        List<Transform> puntosTemporales = new List<Transform>();
+                        foreach (Vector3 punto in nuevaRutaVector)
+                        {
+                            GameObject temp = new GameObject("PuntoRutaTemp_" + punto);
+                            temp.transform.position = punto;
+                            puntosTemporales.Add(temp.transform);
+                        }
+
+                        enemigo.puntos = puntosTemporales.ToArray();
+                        Debug.Log($"[{name}] Ruta del enemigo sobrescrita con {puntosTemporales.Count} puntos.");
+                    }
+
+
+
+
+                    if (iniciarPatrulla)
+                    {
+                        enemigo.permitirPatrulla = true;
+                        Debug.Log($"[{name}] Iniciando patrulla del enemigo.");
+                        enemigo.IniciarPatrulla();
+                    }
+
+                    if (detenerPatrulla)
+                    {
+                        Debug.Log($"[{name}] Deteniendo patrulla del enemigo.");
+                        enemigo.DetenerPatrulla();
+                    }
+                }
+
+                 
                 if (siguienteChat != null)
                 {
                     Debug.Log($"[{name}] Activando chat directamente tras notificación.");
@@ -114,5 +165,4 @@ public class NotificacionSecuencial : MonoBehaviour
             sonidoNotificacion.Play();
         }
     }
-
 }

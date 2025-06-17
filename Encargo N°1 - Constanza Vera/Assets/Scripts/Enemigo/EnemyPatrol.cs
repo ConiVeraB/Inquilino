@@ -14,6 +14,11 @@ public class EnemyPatrol : MonoBehaviour
     [Header("Audio de pasos")]
     public AudioSource audioPasos;
 
+    [HideInInspector]
+    public bool permitirPatrulla = false;
+
+
+
     private NavMeshAgent agent;
     private int indiceActual = 0;
     private float temporizador = 0f;
@@ -22,13 +27,22 @@ public class EnemyPatrol : MonoBehaviour
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        enPatrulla = false;
+        puntos = new Transform[0]; 
     }
+
 
     public void IniciarPatrulla()
     {
+        if (!permitirPatrulla)
+        {
+            Debug.LogWarning($"[{name}] Patrulla bloqueada: aún no está permitido iniciar.");
+            return;
+        }
+
         if (puntos == null || puntos.Length == 0)
         {
-            Debug.LogWarning("Sin puntos de patrulla.");
+            Debug.LogWarning($"[{name}] Sin puntos de patrulla asignados.");
             return;
         }
 
@@ -36,6 +50,7 @@ public class EnemyPatrol : MonoBehaviour
         indiceActual = 0;
         agent.SetDestination(puntos[indiceActual].position);
     }
+
 
     public void DetenerPatrulla()
     {
@@ -46,34 +61,45 @@ public class EnemyPatrol : MonoBehaviour
 
     void Update()
     {
-        if (!enPatrulla || puntos.Length == 0 || !agent.isOnNavMesh) return;
+        if (!enPatrulla || puntos == null || puntos.Length == 0 || !agent.isOnNavMesh)
+            return;
 
         if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
-            temporizador += Time.deltaTime;
-
-            if (temporizador >= espera)
+            
+            if (indiceActual < puntos.Length - 1)
             {
-                indiceActual++;
-                if (indiceActual >= puntos.Length)
-                {
-                    Debug.Log("Sujeto terminó la patrulla y desaparece.");
-                    GetComponent<EnemyController>()?.DesactivarSujeto();
-                    return;
-                }
+                temporizador += Time.deltaTime;
 
-                agent.SetDestination(puntos[indiceActual].position);
-                temporizador = 0f;
+                if (temporizador >= espera)
+                {
+                    indiceActual++;
+                    agent.SetDestination(puntos[indiceActual].position);
+                    temporizador = 0f;
+                }
+            }
+            else
+            {
+              
+                Debug.Log($"[{name}] Ruta completada, desactivando enemigo.");
+                enPatrulla = false;
+                GetComponent<EnemyController>()?.DesactivarSujeto();
             }
         }
 
         if (audioPasos != null)
         {
             if (agent.velocity.magnitude > 0.1f && agent.remainingDistance > agent.stoppingDistance)
+            {
                 if (!audioPasos.isPlaying) audioPasos.Play();
-                else if (audioPasos.isPlaying) audioPasos.Stop();
+            }
+            else
+            {
+                if (audioPasos.isPlaying) audioPasos.Stop();
+            }
         }
     }
+
 }
 
 
