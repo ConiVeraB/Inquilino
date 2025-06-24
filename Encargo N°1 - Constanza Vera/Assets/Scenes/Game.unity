@@ -9697,6 +9697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PisoSegundopiso (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8143489639814835264, guid: 65c98554fb929c04d9f3891f45bc5033, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 54deea9a48be6fe4fb5958e9bd2950d4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37549,7 +37553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6297784924952467109, guid: 3269579576b879040a2971489c27f7e2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.8408234
+      value: 2.0885983
       objectReference: {fileID: 0}
     - target: {fileID: 6297784924952467109, guid: 3269579576b879040a2971489c27f7e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -53462,7 +53466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08182627c89eb8a4884ed1a57a835548, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14
+      value: -0.071
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08182627c89eb8a4884ed1a57a835548, type: 3}
       propertyPath: m_LocalPosition.z
@@ -61137,6 +61141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PisoSegundopiso (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8143489639814835264, guid: 65c98554fb929c04d9f3891f45bc5033, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 54deea9a48be6fe4fb5958e9bd2950d4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -61971,6 +61979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PisoSegundopiso (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8143489639814835264, guid: 65c98554fb929c04d9f3891f45bc5033, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 54deea9a48be6fe4fb5958e9bd2950d4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -65155,7 +65167,7 @@ PrefabInstance:
     - target: {fileID: 1737981134405211780, guid: 5b28df8e610daff4398f5436d27cf061, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 648584dd92b9c1442a74bbb422d85752, type: 2}
+      objectReference: {fileID: 2100000, guid: a4ac79b1f966f8f4f9503a518afadab5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -73927,11 +73939,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4619279314425393274, guid: f3663b8a4e73ec6408e34c268b2a5283, type: 3}
   m_PrefabInstance: {fileID: 1368147638}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1371592883 stripped
+--- !u!4 &1371592883
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54e8110f36dda61488b2d2214d0ad0b3, type: 3}
   m_PrefabInstance: {fileID: 894358003}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005810626}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 208.49, y: 621.12, z: -314.93}
+  m_LocalScale: {x: 314.57278, y: 314.57278, z: 219.50522}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1759441520}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1378583465
 GameObject:
   m_ObjectHideFlags: 0
@@ -74833,6 +74855,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PisoSegundopiso (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8143489639814835264, guid: 65c98554fb929c04d9f3891f45bc5033, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 54deea9a48be6fe4fb5958e9bd2950d4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -93781,6 +93807,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PisoSegundopiso (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8143489639814835264, guid: 65c98554fb929c04d9f3891f45bc5033, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 54deea9a48be6fe4fb5958e9bd2950d4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -95116,6 +95146,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 600562590540787179, guid: 5b28df8e610daff4398f5436d27cf061, type: 3}
   m_PrefabInstance: {fileID: 1650312322}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1977296314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 708fd77ccb4794348a66d2fafe941ac5, type: 3}
+  m_PrefabInstance: {fileID: 678054618}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1977296315}
+  m_Layer: 0
+  m_Name: piso2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1977296315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 708fd77ccb4794348a66d2fafe941ac5, type: 3}
+  m_PrefabInstance: {fileID: 678054618}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977296314}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -121.45, y: 11.68, z: 2.13}
+  m_LocalScale: {x: 6.37161, y: 6.37161, z: 6.37161}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1978615097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96339,6 +96400,77 @@ CapsuleCollider:
   m_Height: 0.43144774
   m_Direction: 1
   m_Center: {x: -0.47384876, y: 0.5479864, z: 0}
+--- !u!1 &2005810626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 54e8110f36dda61488b2d2214d0ad0b3, type: 3}
+  m_PrefabInstance: {fileID: 894358003}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1371592883}
+  - component: {fileID: 2005810628}
+  - component: {fileID: 2005810627}
+  m_Layer: 0
+  m_Name: Espacio Esc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!23 &2005810627
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 54e8110f36dda61488b2d2214d0ad0b3, type: 3}
+  m_PrefabInstance: {fileID: 894358003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005810626}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2005810628
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: 54e8110f36dda61488b2d2214d0ad0b3, type: 3}
+  m_PrefabInstance: {fileID: 894358003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005810626}
+  m_Mesh: {fileID: 2153790460804077041, guid: 54e8110f36dda61488b2d2214d0ad0b3, type: 3}
 --- !u!1001 &2012636622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -104090,7 +104222,7 @@ PrefabInstance:
     - target: {fileID: 1737981134405211780, guid: 5b28df8e610daff4398f5436d27cf061, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4f464ef656b118c4a9d754182f547698, type: 2}
+      objectReference: {fileID: 2100000, guid: a4ac79b1f966f8f4f9503a518afadab5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
