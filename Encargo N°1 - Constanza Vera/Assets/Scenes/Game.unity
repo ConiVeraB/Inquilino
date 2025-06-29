@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 2598420}
   - component: {fileID: 2598422}
   - component: {fileID: 2598421}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 14454838}
   - component: {fileID: 14454837}
   - component: {fileID: 14454836}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Toggle_LuzLavanderia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 20529395}
   - component: {fileID: 20529397}
   - component: {fileID: 20529396}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -884,7 +884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 20921457}
   - component: {fileID: 20921458}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "Notificaci\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1310,7 +1310,7 @@ GameObject:
   - component: {fileID: 31486491}
   - component: {fileID: 31486493}
   - component: {fileID: 31486492}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1568,7 +1568,7 @@ GameObject:
   - component: {fileID: 42870507}
   - component: {fileID: 42870506}
   - component: {fileID: 42870505}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Contestar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2017,7 +2017,7 @@ GameObject:
   - component: {fileID: 53043386}
   - component: {fileID: 53043388}
   - component: {fileID: 53043387}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2098,7 +2098,7 @@ GameObject:
   - component: {fileID: 57288247}
   - component: {fileID: 57288246}
   - component: {fileID: 57288245}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: BotonRegresar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2229,7 +2229,7 @@ GameObject:
   - component: {fileID: 57342382}
   - component: {fileID: 57342384}
   - component: {fileID: 57342383}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2383,7 +2383,7 @@ GameObject:
   - component: {fileID: 64065985}
   - component: {fileID: 64065984}
   - component: {fileID: 64065983}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: BotonChat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7804,7 +7804,7 @@ GameObject:
   - component: {fileID: 76138293}
   - component: {fileID: 76138295}
   - component: {fileID: 76138294}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9180,7 +9180,7 @@ GameObject:
   - component: {fileID: 100125469}
   - component: {fileID: 100125468}
   - component: {fileID: 100125470}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Toggle_LuzHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11960,7 +11960,7 @@ GameObject:
   - component: {fileID: 183350297}
   - component: {fileID: 183350299}
   - component: {fileID: 183350298}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12040,7 +12040,7 @@ GameObject:
   - component: {fileID: 184877642}
   - component: {fileID: 184877644}
   - component: {fileID: 184877643}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12153,15 +12153,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 47024886287369240, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 313487556159660616, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1191958079143479390, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1567282272990397034, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Sprite
@@ -12181,7 +12181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1844436130264105476, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1936950219979346521, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Name
@@ -12189,7 +12189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1936950219979346521, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1936950219979346521, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_IsActive
@@ -12197,15 +12197,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2360761457155839646, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2558765334122903219, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3283753750139252781, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3624442515352746651, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Enabled
@@ -12225,15 +12225,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4316702924888294923, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4646958542689067891, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5510548000704547771, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5557976798642152855, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Type
@@ -12249,11 +12249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6147044580950127693, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6293152921601325899, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6519854326977196530, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -12265,11 +12265,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6986040952006682882, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7075959041833422974, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7250150922324243743, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Name
@@ -12277,7 +12277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7250150922324243743, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7250150922324243743, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_IsActive
@@ -12285,7 +12285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377050253426223708, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8058740137748279205, guid: 0ff4da306967bc44d8f3871b8e9f9dfb, type: 3}
       propertyPath: m_LocalScale.x
@@ -12671,7 +12671,7 @@ GameObject:
   - component: {fileID: 196257883}
   - component: {fileID: 196257885}
   - component: {fileID: 196257884}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SwitchImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13510,7 +13510,7 @@ GameObject:
   - component: {fileID: 225541681}
   - component: {fileID: 225541683}
   - component: {fileID: 225541682}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18811,7 +18811,7 @@ GameObject:
   - component: {fileID: 235365933}
   - component: {fileID: 235365935}
   - component: {fileID: 235365934}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SwitchImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19688,7 +19688,7 @@ GameObject:
   - component: {fileID: 270463598}
   - component: {fileID: 270463600}
   - component: {fileID: 270463599}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19769,7 +19769,7 @@ GameObject:
   - component: {fileID: 273533163}
   - component: {fileID: 273533162}
   - component: {fileID: 273533161}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Regresar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20347,7 +20347,7 @@ GameObject:
   - component: {fileID: 282070264}
   - component: {fileID: 282070266}
   - component: {fileID: 282070265}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20604,7 +20604,7 @@ GameObject:
   - component: {fileID: 287207216}
   - component: {fileID: 287207218}
   - component: {fileID: 287207217}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21036,7 +21036,7 @@ GameObject:
   - component: {fileID: 297971983}
   - component: {fileID: 297971985}
   - component: {fileID: 297971984}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22207,7 +22207,7 @@ GameObject:
   - component: {fileID: 319471188}
   - component: {fileID: 319471187}
   - component: {fileID: 319471185}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: FocusCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22416,7 +22416,7 @@ GameObject:
   - component: {fileID: 330585549}
   - component: {fileID: 330585550}
   - component: {fileID: 330585551}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -22599,10 +22599,11 @@ MonoBehaviour:
   - {fileID: 160371894}
   - {fileID: 968257309}
   phoneController: {fileID: 1273324716}
+  detectionRadius: 0.5
   raycastDistance: 20
   detectableLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   cameraJuego: {fileID: 330585545}
   tagEnemigo: Enemy
 --- !u!1001 &336508840
@@ -22961,7 +22962,7 @@ GameObject:
   - component: {fileID: 346069861}
   - component: {fileID: 346069860}
   - component: {fileID: 346069863}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Toggle_LuzLiving
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23104,7 +23105,7 @@ GameObject:
   - component: {fileID: 348638926}
   - component: {fileID: 348638928}
   - component: {fileID: 348638927}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23992,7 +23993,7 @@ GameObject:
   - component: {fileID: 374917888}
   - component: {fileID: 374917890}
   - component: {fileID: 374917889}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24451,7 +24452,7 @@ GameObject:
   - component: {fileID: 396150938}
   - component: {fileID: 396150937}
   - component: {fileID: 396150936}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: BotonChat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30919,7 +30920,7 @@ GameObject:
   - component: {fileID: 446012944}
   - component: {fileID: 446012946}
   - component: {fileID: 446012945}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31166,7 +31167,7 @@ GameObject:
   - component: {fileID: 448855286}
   - component: {fileID: 448855288}
   - component: {fileID: 448855287}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: PanelMoVi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31765,7 +31766,7 @@ GameObject:
   - component: {fileID: 471370815}
   - component: {fileID: 471370814}
   - component: {fileID: 471370813}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Toggle_LuzCocina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32330,7 +32331,7 @@ GameObject:
   - component: {fileID: 484282431}
   - component: {fileID: 484282430}
   - component: {fileID: 484282429}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Toggle_LuzOficina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32473,7 +32474,7 @@ GameObject:
   - component: {fileID: 486941019}
   - component: {fileID: 486941021}
   - component: {fileID: 486941020}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: TextoLlamada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33312,7 +33313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &512577969
 Transform:
   m_ObjectHideFlags: 0
@@ -34020,7 +34021,7 @@ GameObject:
   - component: {fileID: 537611230}
   - component: {fileID: 537611232}
   - component: {fileID: 537611231}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34662,7 +34663,7 @@ GameObject:
   - component: {fileID: 553197754}
   - component: {fileID: 553197753}
   - component: {fileID: 553197752}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Toggle_LuzBano1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35861,7 +35862,7 @@ GameObject:
   - component: {fileID: 582686332}
   - component: {fileID: 582686334}
   - component: {fileID: 582686333}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36172,7 +36173,7 @@ GameObject:
   - component: {fileID: 593295143}
   - component: {fileID: 593295145}
   - component: {fileID: 593295144}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: panelChat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42502,7 +42503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 643695900}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CameraHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42644,7 +42645,7 @@ GameObject:
   - component: {fileID: 669728959}
   - component: {fileID: 669728961}
   - component: {fileID: 669728960}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: panelChat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43325,7 +43326,7 @@ GameObject:
   - component: {fileID: 681026689}
   - component: {fileID: 681026691}
   - component: {fileID: 681026690}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43470,7 +43471,7 @@ GameObject:
   - component: {fileID: 682599742}
   - component: {fileID: 682599744}
   - component: {fileID: 682599743}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: panelChat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48390,7 +48391,7 @@ GameObject:
   - component: {fileID: 690154546}
   - component: {fileID: 690154545}
   - component: {fileID: 690154544}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: BotonRegresar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50618,7 +50619,7 @@ GameObject:
   - component: {fileID: 749189877}
   - component: {fileID: 749189876}
   - component: {fileID: 749189878}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: PanelMensajes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51308,7 +51309,7 @@ GameObject:
   - component: {fileID: 766473809}
   - component: {fileID: 766473811}
   - component: {fileID: 766473810}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52391,7 +52392,7 @@ GameObject:
   - component: {fileID: 789137038}
   - component: {fileID: 789137040}
   - component: {fileID: 789137039}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SwitchImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52599,7 +52600,7 @@ GameObject:
   - component: {fileID: 792277901}
   - component: {fileID: 792277900}
   - component: {fileID: 792277899}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: BotonRegresar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54658,7 +54659,7 @@ GameObject:
   - component: {fileID: 840696700}
   - component: {fileID: 840696702}
   - component: {fileID: 840696701}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56967,7 +56968,7 @@ GameObject:
   - component: {fileID: 951789887}
   - component: {fileID: 951789886}
   - component: {fileID: 951789885}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: BotonMensajes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59051,7 +59052,7 @@ GameObject:
   - component: {fileID: 1015244547}
   - component: {fileID: 1015244549}
   - component: {fileID: 1015244548}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59260,7 +59261,7 @@ GameObject:
   - component: {fileID: 1016742183}
   - component: {fileID: 1016742182}
   - component: {fileID: 1016742181}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Btn_Chat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60732,7 +60733,7 @@ GameObject:
   - component: {fileID: 1056248559}
   - component: {fileID: 1056248561}
   - component: {fileID: 1056248560}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61785,7 +61786,7 @@ GameObject:
   - component: {fileID: 1076794810}
   - component: {fileID: 1076794812}
   - component: {fileID: 1076794811}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62877,7 +62878,7 @@ GameObject:
   - component: {fileID: 1110551845}
   - component: {fileID: 1110551844}
   - component: {fileID: 1110551843}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Toggle_LuzBodega
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63606,7 +63607,7 @@ GameObject:
   - component: {fileID: 1136715317}
   - component: {fileID: 1136715319}
   - component: {fileID: 1136715318}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63834,7 +63835,7 @@ GameObject:
   - component: {fileID: 1145674539}
   - component: {fileID: 1145674541}
   - component: {fileID: 1145674540}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65372,7 +65373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1169095405}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InspectPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66084,7 +66085,7 @@ GameObject:
   - component: {fileID: 1197448101}
   - component: {fileID: 1197448103}
   - component: {fileID: 1197448102}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66433,7 +66434,7 @@ GameObject:
   - component: {fileID: 1214858883}
   - component: {fileID: 1214858885}
   - component: {fileID: 1214858884}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SwitchImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66825,7 +66826,7 @@ GameObject:
   - component: {fileID: 1226712062}
   - component: {fileID: 1226712061}
   - component: {fileID: 1226712060}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Toggle_LuzHabitacion1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67203,7 +67204,7 @@ GameObject:
   - component: {fileID: 1241054307}
   - component: {fileID: 1241054309}
   - component: {fileID: 1241054308}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: AppLuces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70336,7 +70337,7 @@ GameObject:
   - component: {fileID: 1333697431}
   - component: {fileID: 1333697430}
   - component: {fileID: 1333697429}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Btn_AppLuces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71166,7 +71167,7 @@ GameObject:
   - component: {fileID: 1358463426}
   - component: {fileID: 1358463428}
   - component: {fileID: 1358463427}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SwitchImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71757,7 +71758,7 @@ GameObject:
   - component: {fileID: 1378583475}
   - component: {fileID: 1378583474}
   - component: {fileID: 1378583477}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -72659,7 +72660,7 @@ GameObject:
   - component: {fileID: 1397385175}
   - component: {fileID: 1397385177}
   - component: {fileID: 1397385176}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72881,7 +72882,7 @@ GameObject:
   - component: {fileID: 1410802478}
   - component: {fileID: 1410802480}
   - component: {fileID: 1410802479}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SwitchImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73181,7 +73182,7 @@ GameObject:
   - component: {fileID: 1421988810}
   - component: {fileID: 1421988812}
   - component: {fileID: 1421988811}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: PanelNotificacion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74420,7 +74421,7 @@ GameObject:
   - component: {fileID: 1449589725}
   - component: {fileID: 1449589727}
   - component: {fileID: 1449589726}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: panelContestarLlamada1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74499,7 +74500,7 @@ GameObject:
   - component: {fileID: 1454097236}
   - component: {fileID: 1454097235}
   - component: {fileID: 1454097234}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Regresar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75014,7 +75015,7 @@ GameObject:
   - component: {fileID: 1456724528}
   - component: {fileID: 1456724530}
   - component: {fileID: 1456724529}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SwitchImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76010,7 +76011,7 @@ GameObject:
   - component: {fileID: 1488479152}
   - component: {fileID: 1488479154}
   - component: {fileID: 1488479153}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SwitchImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77117,7 +77118,7 @@ GameObject:
   - component: {fileID: 1521234392}
   - component: {fileID: 1521234394}
   - component: {fileID: 1521234393}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: panelContestarLlamada2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80929,7 +80930,7 @@ GameObject:
   - component: {fileID: 1643650964}
   - component: {fileID: 1643650963}
   - component: {fileID: 1643650962}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: panelLlamada1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81746,7 +81747,7 @@ GameObject:
   - component: {fileID: 1666329493}
   - component: {fileID: 1666329492}
   - component: {fileID: 1666329491}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Cortar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82518,7 +82519,7 @@ GameObject:
   - component: {fileID: 1715431169}
   - component: {fileID: 1715431168}
   - component: {fileID: 1715431167}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Toggle_LuzHabitacion2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82661,7 +82662,7 @@ GameObject:
   - component: {fileID: 1717693061}
   - component: {fileID: 1717693063}
   - component: {fileID: 1717693062}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84520,7 +84521,7 @@ GameObject:
   - component: {fileID: 1768016699}
   - component: {fileID: 1768016698}
   - component: {fileID: 1768016697}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: BotonMoVi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85776,7 +85777,7 @@ GameObject:
   - component: {fileID: 1811544537}
   - component: {fileID: 1811544539}
   - component: {fileID: 1811544538}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86169,7 +86170,7 @@ GameObject:
   - component: {fileID: 1825141765}
   - component: {fileID: 1825141764}
   - component: {fileID: 1825141767}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: UV light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86453,7 +86454,7 @@ GameObject:
   - component: {fileID: 1829436308}
   - component: {fileID: 1829436307}
   - component: {fileID: 1829436306}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Toggle_LuzSalaDeEstar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88269,7 +88270,7 @@ GameObject:
   - component: {fileID: 1887709007}
   - component: {fileID: 1887709009}
   - component: {fileID: 1887709008}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88344,7 +88345,7 @@ GameObject:
   - component: {fileID: 1889498097}
   - component: {fileID: 1889498099}
   - component: {fileID: 1889498098}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88715,7 +88716,7 @@ GameObject:
   - component: {fileID: 1894816352}
   - component: {fileID: 1894816354}
   - component: {fileID: 1894816353}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90017,7 +90018,7 @@ GameObject:
   - component: {fileID: 1919125128}
   - component: {fileID: 1919125127}
   - component: {fileID: 1919125126}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Cortar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91105,7 +91106,7 @@ GameObject:
   - component: {fileID: 1960682589}
   - component: {fileID: 1960682591}
   - component: {fileID: 1960682590}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SwitchImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92428,7 +92429,7 @@ GameObject:
   - component: {fileID: 1983142022}
   - component: {fileID: 1983142024}
   - component: {fileID: 1983142023}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SwitchImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93120,7 +93121,7 @@ GameObject:
   - component: {fileID: 2000905779}
   - component: {fileID: 2000905781}
   - component: {fileID: 2000905780}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93684,7 +93685,7 @@ GameObject:
   - component: {fileID: 2015857913}
   - component: {fileID: 2015857912}
   - component: {fileID: 2015857911}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Toggle_LuzCloset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94166,7 +94167,7 @@ GameObject:
   - component: {fileID: 2027504915}
   - component: {fileID: 2027504917}
   - component: {fileID: 2027504916}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: panelLlamada2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94768,7 +94769,7 @@ GameObject:
   - component: {fileID: 2047365226}
   - component: {fileID: 2047365228}
   - component: {fileID: 2047365227}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95457,7 +95458,7 @@ GameObject:
   - component: {fileID: 2054723622}
   - component: {fileID: 2054723624}
   - component: {fileID: 2054723623}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SwitchImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101085,7 +101086,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2095544616}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: PhoneHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102081,7 +102082,7 @@ GameObject:
   - component: {fileID: 2130436179}
   - component: {fileID: 2130436178}
   - component: {fileID: 2130436177}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: BotonRegresar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

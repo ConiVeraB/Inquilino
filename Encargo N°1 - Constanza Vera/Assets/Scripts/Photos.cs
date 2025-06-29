@@ -18,6 +18,7 @@ public class Photos : MonoBehaviour
     public PhoneController phoneController;
 
     [Header("Configuración de Detección")]
+    public float detectionRadius = 0.5f;
     public float raycastDistance = 20f; // Distancia máxima para el raycast
     public LayerMask detectableLayers; // Qué capas de objetos pueden ser detectadas (ej. "Enemigo", "Pista")
     public Camera cameraJuego;
@@ -75,7 +76,9 @@ public class Photos : MonoBehaviour
             return false;
         }
 
-        foreach(GameObject enemigo in enemigos)
+        Debug.Log("Paso 1 SUPERADO: Se encontraron " + enemigos.Length + " enemigos.");
+
+        foreach (GameObject enemigo in enemigos)
         {
             Vector3 posEnViewport = cameraJuego.WorldToViewportPoint(enemigo.transform.position);
             bool enLaVista = posEnViewport.z > 0 &&
@@ -83,22 +86,48 @@ public class Photos : MonoBehaviour
                              posEnViewport.y > 0.1f && posEnViewport.y < 0.9f;
             if (enLaVista)
             {
-                // --- COMPROBACIÓN 2: ¿Hay algo bloqueando la vista? (Raycast) ---
-                Vector3 direccionAlEnemigo = enemigo.transform.position - cameraJuego.transform.position;
-                Debug.DrawRay(cameraJuego.transform.position, direccionAlEnemigo, Color.red, 2.0f); // Dibuja una línea roja por 2 segundos
+                Vector3 origen = cameraJuego.transform.position;
+                Vector3 direccion = enemigo.transform.position - origen;
+                float distancia = direccion.magnitude; // La distancia hasta el enemigo
+                //Vector3 direccionAlEnemigo = enemigo.transform.position - cameraJuego.transform.position;
+                //Debug.DrawRay(cameraJuego.transform.position, direccionAlEnemigo, Color.red, 2.0f); // Dibuja una línea roja por 2 segundos
                 RaycastHit hit;
 
-                // Lanzamos un rayo desde la cámara hacia el enemigo
-                if (Physics.Raycast(cameraJuego.transform.position, direccionAlEnemigo, out hit))
+                if (Physics.SphereCast(origen, detectionRadius, direccion, out hit, distancia, detectableLayers))
                 {
-                    // Si el primer objeto que golpea el rayo tiene el tag del enemigo...
-                    if (hit.collider.CompareTag(tagEnemigo))
+                    // La esfera golpeó algo en la layer correcta. ¿Es el enemigo que buscamos?
+                    // Comparamos el transform del collider golpeado con el del enemigo.
+                    if (hit.transform == enemigo.transform || hit.transform.IsChildOf(enemigo.transform))
                     {
-                        // ¡Bingo! Hemos encontrado un enemigo visible.
-                        Debug.Log("¡Enemigo detectado correctamente en la foto!");
-                        return true; // Devolvemos 'true' y salimos de la función.
+                        Debug.Log("Paso 3 SUPERADO para '" + enemigo.name + "': SphereCast golpeó a '" + hit.collider.name + "'. ¡FOTO CORRECTA!");
+                        // Dibuja la esfera en el punto de impacto para que veas qué golpeó
+                        Debug.DrawRay(origen, direccion.normalized * hit.distance, Color.green, 2.0f);
+                        return true;
                     }
+
                 }
+                else
+                {
+                    // La esfera NO golpeó NADA en la layer especificada.
+                    Debug.DrawRay(origen, direccion, Color.magenta, 2.0f); // Dibuja rayo MAGENTA (fallo de SphereCast)
+                    Debug.LogError("Paso 3 FALLIDO para '" + enemigo.name + "': El SphereCast fue lanzado pero no golpeó NADA en la LayerMask 'Enemigo'.");
+                }
+
+                Debug.Log("FIN DE VERIFICACIÓN: Ningún enemigo cumplió las condiciones.");
+                return false;
+
+                // Lanzamos un rayo desde la cámara hacia el enemigo
+                /* if (Physics.Raycast(cameraJuego.transform.position, direccionAlEnemigo, out hit))
+                 {
+                     // Si el primer objeto que golpea el rayo tiene el tag del enemigo...
+                     if (hit.collider.CompareTag(tagEnemigo))
+                     {
+                         // ¡Bingo! Hemos encontrado un enemigo visible.
+                         Debug.Log("¡Enemigo detectado correctamente en la foto!");
+                         return true; // Devolvemos 'true' y salimos de la función.
+                     }
+                 } 
+                */
             }
         }
 
