@@ -33306,7 +33306,7 @@ GameObject:
   - component: {fileID: 512577976}
   - component: {fileID: 512577977}
   - component: {fileID: 512577978}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ElSujeto
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -69346,7 +69346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1299977199}
   - component: {fileID: 1299977200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SonidoEnemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

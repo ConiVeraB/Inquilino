@@ -22,9 +22,9 @@ TagManager:
   - Display
   - FocusedObject
   - PistasClaves
-  - 
+  - Enemy
   - Camera
-  - 
+  - Player
   - 
   - 
   - 
