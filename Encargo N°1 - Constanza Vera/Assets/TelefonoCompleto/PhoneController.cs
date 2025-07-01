@@ -29,6 +29,8 @@ public class PhoneController : MonoBehaviour
     public GameObject panelChat2;
     public GameObject panelChat3;
     public GameObject panelNotificacionBloqueo;
+    public GameObject panelGaleria2;
+
 
 
     //[Header("Control de Jugador")]
@@ -363,6 +365,47 @@ public class PhoneController : MonoBehaviour
         }
         PlayButtonSound();
     }
+
+    public void OpenGaleria2()
+    {
+        if (panelGaleria2 != null)
+        {
+            ActivateOnlyPanel(panelGaleria2);
+
+            RectTransform rt = panelGaleria2.GetComponent<RectTransform>();
+            if (rt != null)
+            {
+                rt.localScale = Vector3.one;
+                rt.anchoredPosition = Vector2.zero;
+                rt.sizeDelta = new Vector2(1000, 1800);
+            }
+
+            CanvasGroup cg = panelGaleria2.GetComponent<CanvasGroup>();
+            if (cg != null)
+            {
+                cg.alpha = 1f;
+                cg.interactable = true;
+                cg.blocksRaycasts = true;
+            }
+        }
+
+        pantallaRecorte?.SetActive(true);
+        phoneUI?.SetActive(true);
+        cameraCelular.enabled = false;
+        PlayButtonSound();
+    }
+
+    public void VolverAlInicioDesdeGaleria2()
+    {
+        ActivateOnlyPanel(panelInicio);
+        pantallaRecorte?.SetActive(true);
+        phoneUI?.SetActive(true);
+        cameraCelular.enabled = false;
+        PlayButtonSound();
+    }
+
+
+
 
     public void OpenSensorMovimientoApp()
     {
@@ -840,7 +883,9 @@ public class PhoneController : MonoBehaviour
         panelSensorMovimiento?.SetActive(false);
         panelChat1?.SetActive(false);
         panelChat2?.SetActive(false);   
-        panelChat3?.SetActive(false);   
+        panelChat3?.SetActive(false);
+        panelGaleria2?.SetActive(false);
+
 
         if (panelToActivate != null)
             panelToActivate.SetActive(true);
