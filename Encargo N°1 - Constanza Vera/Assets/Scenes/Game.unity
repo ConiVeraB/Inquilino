@@ -97400,10 +97400,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8579881047844626533, guid: 9397f4f59a20cd244a79bc16341b5862, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4986820710371026645, guid: 9397f4f59a20cd244a79bc16341b5862, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 10801663a40cdd7498535dbd554c35d2, type: 2}
+    - target: {fileID: -3133498875991405556, guid: 9397f4f59a20cd244a79bc16341b5862, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -2510366512958503610, guid: 9397f4f59a20cd244a79bc16341b5862, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
