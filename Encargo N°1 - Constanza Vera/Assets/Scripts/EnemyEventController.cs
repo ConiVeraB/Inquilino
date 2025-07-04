@@ -10,6 +10,7 @@ public class EnemyEventController : MonoBehaviour
     public Transform enemySpawnPoint;
     [Tooltip("Duración en segundos que el enemigo será visible.")]
     public float enemyVisibleDuration = 5f;
+    public Animator enemyAnimator;
 
     [Header("Configuración de Iluminación")]
     [Tooltip("Todas las luces que se apagarán durante el evento.")]
@@ -90,6 +91,12 @@ public class EnemyEventController : MonoBehaviour
                 enemyObject.transform.position = enemySpawnPoint.position;
                 enemyObject.transform.rotation = enemySpawnPoint.rotation;
             }
+
+            if (enemyAnimator != null)
+            {
+                // Establecemos la booleana a 'true' para iniciar la animación
+                enemyAnimator.SetBool("Caminar", true); // << CAMBIO AQUÍ
+            }
             Debug.Log("Enemigo apareció.");
         }
 
@@ -105,10 +112,16 @@ public class EnemyEventController : MonoBehaviour
         // --- 7. Desaparecer enemigo ---
         if (enemyObject != null)
         {
+            if (enemyAnimator != null)
+            {
+                // CORRECCIÓN: Usamos el MISMO nombre de booleana para desactivarla
+                enemyAnimator.SetBool("Caminar", false);
+            }
+
+            // CORRECCIÓN: Desactivamos el objeto DENTRO del 'if' para más seguridad.
             enemyObject.SetActive(false);
             Debug.Log("Enemigo desapareció.");
         }
-
         // --- 8. Esperar el resto del tiempo con las luces apagadas ---
         // Asegura que lightsOffDuration sea mayor que (preSpawnDelay + enemyVisibleDuration)
         float remainingLightsOffTime = lightsOffDuration - (preSpawnDelay + enemyVisibleDuration);
