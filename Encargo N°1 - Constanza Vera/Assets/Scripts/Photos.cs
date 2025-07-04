@@ -34,11 +34,8 @@ public class Photos : MonoBehaviour
     [SerializeField] private float velocidadAnim = 0.5f;
     [SerializeField] private float duracionFeedback = 4f;
 
-
-
-
-
-
+    [Header("Gestión de Misión")]
+    public PhotoQuestManager questManager;
 
     private void Start()
     {
@@ -67,11 +64,16 @@ public class Photos : MonoBehaviour
         {
             Debug.LogError("No se ha asignado el PhoneSystem en el Inspector del script Photos.");
         }
+
+        if (questManager == null)
+        {
+            Debug.LogError("¡ERROR! No se ha asignado el PhotoQuestManager en el script Photos.");
+        }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) && !isDisplayingPhoto )
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !isDisplayingPhoto && questManager.IsQuestActive())
         {
             bool fotoEsCorrecta = VerificarEnemigo();
 
@@ -195,7 +197,11 @@ public class Photos : MonoBehaviour
             MostrarFeedback(panelFotoIncorrecta);
         }
 
-        photoTexture = new Texture2D(photoWidth, photoHeight, TextureFormat.RGB24, false);
+        if (questManager != null)
+        {
+            questManager.RegisterPhoto(esCorrecta);
+
+            photoTexture = new Texture2D(photoWidth, photoHeight, TextureFormat.RGB24, false);
         for (int i = 0; i < galeria.Count; i++)
         {
             if (galeria[i].texture == null)
@@ -235,6 +241,8 @@ public class Photos : MonoBehaviour
        // Destroy(photoTexture);
        //   photoTexture = null; 
         isDisplayingPhoto = false; 
+
+        }
 
     }
 }
