@@ -23163,7 +23163,7 @@ MonoBehaviour:
   posOculta: {x: 1140, y: 217.71}
   velocidadAnim: 0.5
   duracionFeedback: 4
-  questManager: {fileID: 0}
+  questManager: {fileID: 2036154833}
 --- !u!1001 &336508840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102598,9 +102598,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPhotos: 4
-  photosToWin: 2
-  winSceneName: 
-  loseSceneName: 
+  photosToWin: 4
+  winSceneName: Win
+  loseSceneName: Lose
 --- !u!4 &2036154834
 Transform:
   m_ObjectHideFlags: 0
