@@ -32,6 +32,11 @@ public class PlayerController : MonoBehaviour
     bool enEscalera = false;
     void Start()
     {
+        Time.timeScale = 1f;
+        Pausemenu.GameIsPaused = false; // Asegura que el juego no esté pausado
+        Cursor.lockState = CursorLockMode.Locked; // Bloquea el cursor en el centro
+        Cursor.visible = false;                   // Oculta el cursor
+                                                  // --- FIN DE LÍNEAS A AÑADIR ---
         rb = GetComponent<Rigidbody>();
         camara = Camera.main;
 

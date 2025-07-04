@@ -5,7 +5,7 @@ public class Pausemenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     private bool isPaused = false;
-    public static bool GameIsPaused { get; private set; }
+    public static bool GameIsPaused { get; set; }
 
     void Update()
     {
@@ -32,7 +32,10 @@ public class Pausemenu : MonoBehaviour
     }
 
     public void Home()
-    {
+    { // --- AÑADE ESTAS LÍNEAS PARA RESETEAR EL ESTADO ---
+        isPaused = false;
+        GameIsPaused = false;
+        // --- FIN DE LÍNEAS A AÑADIR ---
         SceneManager.LoadScene("Main Menú");
         Time.timeScale = 1;
     }
