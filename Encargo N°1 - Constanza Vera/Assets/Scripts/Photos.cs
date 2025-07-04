@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using DG.Tweening;
 //using NUnit.Framework;
 using System.Collections.Generic;
 public class Photos : MonoBehaviour
@@ -23,7 +24,20 @@ public class Photos : MonoBehaviour
     public LayerMask detectableLayers; // Qué capas de objetos pueden ser detectadas (ej. "Enemigo", "Pista")
     public Camera cameraJuego;
     public string tagEnemigo = "Enemy";
-  
+
+    [Header("Feedback de Foto")]
+    [SerializeField] private RectTransform panelFotoCorrecta;
+    [SerializeField] private RectTransform panelFotoIncorrecta;
+
+    [SerializeField] private Vector2 posVisible = new Vector2(770.72f, 217.71f);
+    [SerializeField] private Vector2 posOculta = new Vector2(1140f, 217.71f);
+    [SerializeField] private float velocidadAnim = 0.5f;
+    [SerializeField] private float duracionFeedback = 4f;
+
+
+
+
+
 
 
     private void Start()
@@ -142,6 +156,23 @@ public class Photos : MonoBehaviour
     }
     */
 
+    private void MostrarFeedback(RectTransform panel)
+    {
+        if (panel == null) return;
+
+        panel.DOKill();
+        panel.anchoredPosition = posOculta;
+
+        panel.DOAnchorPos(posVisible, velocidadAnim).SetEase(Ease.OutCubic).OnComplete(() =>
+        {
+            DOVirtual.DelayedCall(duracionFeedback, () =>
+            {
+                panel.DOAnchorPos(posOculta, velocidadAnim).SetEase(Ease.InCubic);
+            });
+        });
+    }
+
+
     IEnumerator CaptureAndDisplay(bool esCorrecta)
     {
         isDisplayingPhoto = true;
@@ -150,10 +181,18 @@ public class Photos : MonoBehaviour
         if (esCorrecta)
         {
             Debug.Log("CATALOGANDO FOTO COMO: CORRECTA");
+
+            if (esCorrecta)
+            {
+                Debug.Log("CATALOGANDO FOTO COMO: CORRECTA");
+                MostrarFeedback(panelFotoCorrecta);
+            }
+
         }
         else
         {
             Debug.Log("CATALOGANDO FOTO COMO: INCORRECTA");
+            MostrarFeedback(panelFotoIncorrecta);
         }
 
         photoTexture = new Texture2D(photoWidth, photoHeight, TextureFormat.RGB24, false);
