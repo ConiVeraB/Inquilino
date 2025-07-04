@@ -1188,6 +1188,10 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 41.348175
       objectReference: {fileID: 0}
+    - target: {fileID: 211810981009007446, guid: 65934d3887e950748bf2ba7962bf8d52, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 65934d3887e950748bf2ba7962bf8d52, type: 3}
       propertyPath: m_Name
       value: Lampara de pared (17)
@@ -1219,6 +1223,10 @@ PrefabInstance:
     - target: {fileID: 1383045212028373405, guid: 65934d3887e950748bf2ba7962bf8d52, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -91.987
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878363014981533957, guid: 65934d3887e950748bf2ba7962bf8d52, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22708,6 +22716,10 @@ MonoBehaviour:
   enemySpawnPoint: {fileID: 320551597}
   enemyVisibleDuration: 7
   enemyAnimator: {fileID: 642068057}
+  patrolSpeed: 2
+  rotationSpeed: 120
+  timeBetweenRoutines: 4
+  obstacleCheckDistance: 0.5
   lightsToAffect:
   - {fileID: 93109397}
   - {fileID: 1080015453}
@@ -22747,7 +22759,7 @@ Transform:
   m_GameObject: {fileID: 320551594}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -142.19, y: 2.95, z: 8.66}
+  m_LocalPosition: {x: -142.19, y: 2.73, z: 8.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44276,7 +44288,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &643187584
 GameObject:
@@ -54678,6 +54690,10 @@ MonoBehaviour:
   enemySpawnPoint: {fileID: 774982312}
   enemyVisibleDuration: 7
   enemyAnimator: {fileID: 642068057}
+  patrolSpeed: 2
+  rotationSpeed: 120
+  timeBetweenRoutines: 4
+  obstacleCheckDistance: 0.5
   lightsToAffect:
   - {fileID: 93109397}
   - {fileID: 1080015453}
@@ -54717,7 +54733,7 @@ Transform:
   m_GameObject: {fileID: 774982309}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.99999744, z: -0, w: 0.0022701232}
-  m_LocalPosition: {x: -121.504616, y: 2.28, z: -1.0276048}
+  m_LocalPosition: {x: -121.504616, y: 2.71, z: -1.0276048}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -56160,6 +56176,10 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 41.348175
       objectReference: {fileID: 0}
+    - target: {fileID: 211810981009007446, guid: 65934d3887e950748bf2ba7962bf8d52, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 65934d3887e950748bf2ba7962bf8d52, type: 3}
       propertyPath: m_Name
       value: Lampara de pared (18)
@@ -56191,6 +56211,10 @@ PrefabInstance:
     - target: {fileID: 1383045212028373405, guid: 65934d3887e950748bf2ba7962bf8d52, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -91.987
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878363014981533957, guid: 65934d3887e950748bf2ba7962bf8d52, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -100116,6 +100140,10 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 41.348175
       objectReference: {fileID: 0}
+    - target: {fileID: 211810981009007446, guid: 65934d3887e950748bf2ba7962bf8d52, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 65934d3887e950748bf2ba7962bf8d52, type: 3}
       propertyPath: m_Name
       value: Lampara de pared (19)
@@ -100147,6 +100175,10 @@ PrefabInstance:
     - target: {fileID: 1383045212028373405, guid: 65934d3887e950748bf2ba7962bf8d52, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -91.987
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878363014981533957, guid: 65934d3887e950748bf2ba7962bf8d52, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -110911,6 +110943,10 @@ MonoBehaviour:
   enemySpawnPoint: {fileID: 2137751104}
   enemyVisibleDuration: 7
   enemyAnimator: {fileID: 642068057}
+  patrolSpeed: 2
+  rotationSpeed: 120
+  timeBetweenRoutines: 4
+  obstacleCheckDistance: 0.5
   lightsToAffect:
   - {fileID: 93109397}
   - {fileID: 1080015453}
